@@ -1,3 +1,4 @@
+// swiftlint:disable identifier_name
 struct User: Decodable {
 
   let login: String
@@ -6,3 +7,4 @@ struct User: Decodable {
   let type: String
   let site_admin: Bool
 }
+// swiftlint:enable identifier_name
