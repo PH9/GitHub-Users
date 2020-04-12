@@ -30,17 +30,15 @@ class UserViewController: UITableViewController {
     }
 
     if users.count == 0 {
-      emptyUserHandler()
+      showFullPage(message: "GitHub have no user")
       return
     }
     dataSource.replace(users: users)
   }
 
-  private func emptyUserHandler() {
-    let size = CGSize(width: view.bounds.size.width, height: view.bounds.size.height)
-    let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-    let messageLabel = UILabel(frame: rect)
-    messageLabel.text = "GitHub have no user"
+  private func showFullPage(message: String) {
+    let messageLabel = UILabel()
+    messageLabel.text = message
     messageLabel.numberOfLines = 0
     messageLabel.textAlignment = .center
     messageLabel.font = .preferredFont(forTextStyle: .body)
@@ -52,7 +50,8 @@ class UserViewController: UITableViewController {
   }
 
   private func getUsersFailure(_ error: AppError) {
-    print(error)
+    showFullPage(message: error.message)
+    tableView.reloadData()
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
