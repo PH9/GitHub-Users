@@ -1,6 +1,6 @@
 import Foundation
 
-struct AppError: Error {
+struct AppError: Error, Decodable {
 
   let code: Int
   let message: String
