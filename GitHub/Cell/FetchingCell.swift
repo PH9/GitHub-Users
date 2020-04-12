@@ -7,6 +7,7 @@ class FetchingCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     selectionStyle = .none
+    activityIndicatorView.hidesWhenStopped = true
     activityIndicatorView.startAnimating()
   }
 

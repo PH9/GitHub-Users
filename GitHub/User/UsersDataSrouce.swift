@@ -8,9 +8,7 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
     case error
   }
 
-  private(set) var values: [[Any]] = []
-  private var isFetching = true
-  private var errorMessage: String?
+  private(set) var values: [[Any]] = [[]]
 
   func replace(users: [User]) {
     values.removeAll()
@@ -18,13 +16,15 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
   }
 
   func showFetchingCell() {
-    addEmptySection(section: Section.error.rawValue)
+    addEmptySection(section: Section.fetching.rawValue)
     values.insert([true], at: Section.fetching.rawValue)
+    values.remove(at: Section.error.rawValue)
   }
 
   func showErrorCell(message: String) {
     addEmptySection(section: Section.error.rawValue)
     values.insert([message], at: Section.error.rawValue)
+    values.remove(at: Section.fetching.rawValue)
   }
 
   func addEmptySection(section: Int) {
@@ -60,7 +60,14 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
       return cell
     }
 
-    fatalError("Not implemented yet!")
+    if indexPath.section == Section.error.rawValue {
+      let cell = tableView.dequeue(ErrorCell.self, for: indexPath)
+      let message = value as? String
+      cell.configureWith(message: message!)
+      return cell
+    }
+
+    fatalError("Unimplemented \(indexPath)")
   }
 
   func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {

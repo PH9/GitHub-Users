@@ -25,20 +25,16 @@ class UserViewController: UITableViewController {
 
   private func registerCell() {
     tableView.register(FetchingCell.self)
+    tableView.register(ErrorCell.self)
   }
 
   private func getUsersSuccess(_ users: [User]) {
-    defer {
-      DispatchQueue.main.async {
-        self.tableView.reloadData()
-      }
-    }
-
     if users.count == 0 {
       showFullPage(message: "GitHub have no user")
       return
     }
     dataSource.replace(users: users)
+    tableView.reloadData()
   }
 
   private func showFullPage(message: String) {
