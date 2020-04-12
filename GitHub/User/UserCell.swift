@@ -55,10 +55,8 @@ class UserCell: UITableViewCell {
   }
 
   @IBAction func favoriteButtonTapped(_ sender: Any) {
-    let isFavorite = !UserDefaults.standard.bool(forKey: "favorite-user-id-\(user.id)")
-    UserDefaults.standard.set(isFavorite, forKey: "favorite-user-id-\(user.id)")
-    let buttonTitle = isFavorite ? "Unfavorite" : "Favorite"
-    favoriteButton.setTitle(buttonTitle, for: .normal)
+    toggleFavoriteBy(userId: user.id)
+    setButtonTitleBy(userId: user.id)
   }
 
   func configureWith(user: User) {
@@ -68,10 +66,27 @@ class UserCell: UITableViewCell {
     urlLabel.text = user.html_url
     accountTypeLabel.text = user.type
     adminStatusLabel.text = String(user.site_admin)
+    setButtonTitleBy(userId: user.id)
+  }
 
-    let isFavorite = UserDefaults.standard.bool(forKey: "favorite-user-id-\(user.id)")
-    let buttonTitle = isFavorite ? "Unfavorite" : "Favorite"
+  private func setButtonTitleBy(userId: Int) {
+    let isFavorite = UserDefaults.standard.bool(forKey: generateFavoriteKey(userId: user.id))
+    let buttonTitle = getButtonTitle(isFavorite: isFavorite)
     favoriteButton.setTitle(buttonTitle, for: .normal)
+  }
+
+  private func toggleFavoriteBy(userId: Int) {
+    let key = generateFavoriteKey(userId: userId)
+    let isFavorite = !UserDefaults.standard.bool(forKey: key)
+    UserDefaults.standard.set(isFavorite, forKey: key)
+  }
+
+  private func generateFavoriteKey(userId: Int) -> String {
+    return "favorite-user-id-\(userId)"
+  }
+
+  private func getButtonTitle(isFavorite: Bool) -> String {
+    return isFavorite ? "Unfavorite" : "Favorite"
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
