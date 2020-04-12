@@ -22,6 +22,7 @@
 		1690B5B52442DB48003DF17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B42442DB48003DF17A /* User.swift */; };
 		1697B9752442F3E200A09CAB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1697B9742442F3E200A09CAB /* Kingfisher.framework */; };
 		1697B97B24433F3800A09CAB /* UIImageView+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */; };
+		1697B97D2443402B00A09CAB /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1690B5B42442DB48003DF17A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1697B9742442F3E200A09CAB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
+		1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				162B82D12442DF4300C45229 /* AppError.swift */,
+				1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */,
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
 				1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */,
 			);
@@ -319,6 +322,7 @@
 				1688AC1B2442EA4400A6B692 /* SimpleWebViewViewController.swift in Sources */,
 				162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */,
 				167927B62442D50D00818F67 /* AppDelegate.swift in Sources */,
+				1697B97D2443402B00A09CAB /* ImagePrefetcher.swift in Sources */,
 				1690B5B52442DB48003DF17A /* User.swift in Sources */,
 				167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */,
 			);

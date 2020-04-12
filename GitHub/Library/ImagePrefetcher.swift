@@ -1,0 +1,5 @@
+import Kingfisher
+
+class ImagePrefetcher {
+
+}
