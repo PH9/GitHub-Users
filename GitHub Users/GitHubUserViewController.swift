@@ -6,15 +6,15 @@ class GitHubUserViewController: UITableViewController {
     super.viewDidLoad()
     getUsers { result in
       switch result {
-      case .success(let user):
-        print(user)
+      case .success(let users):
+        print(users)
       case .failure(let error):
         print(error)
       }
     }
   }
 
-  private func getUsers(completionHandler completion: @escaping (Result<User, Error>) -> Void) {
+  private func getUsers(completionHandler completion: @escaping (Result<[User], Error>) -> Void) {
 
   }
 }
