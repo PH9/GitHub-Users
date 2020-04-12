@@ -8,6 +8,7 @@ class UserViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     binding()
+    registerCell()
     viewModel.getUsers()
 
     tableView.rowHeight = UITableView.automaticDimension
@@ -20,6 +21,11 @@ class UserViewController: UITableViewController {
     tableView.prefetchDataSource = dataSource
     viewModel.getUserSuccess = getUsersSuccess(_:)
     viewModel.getUserFailure = getUsersFailure(_:)
+  }
+
+  private func registerCell() {
+    let nib = UINib(nibName: FetchingCell.reusableIdentifier, bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: FetchingCell.reusableIdentifier)
   }
 
   private func getUsersSuccess(_ users: [User]) {
