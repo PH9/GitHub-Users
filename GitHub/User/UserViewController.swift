@@ -3,9 +3,11 @@ import UIKit
 class UserViewController: UITableViewController {
 
   let viewModel = UsersViewModel()
+  let dataSource = UsersDataSource()
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.dataSource = dataSource
     bidingViewModel()
     viewModel.getUsers()
   }
@@ -16,7 +18,10 @@ class UserViewController: UITableViewController {
   }
 
   private func getUsersSuccess(_ users: [User]) {
-    print(users)
+    dataSource.replace(users: users)
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
   }
 
   private func getUsersFailure(_ error: AppError) {

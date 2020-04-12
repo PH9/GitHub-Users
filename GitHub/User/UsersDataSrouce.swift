@@ -4,6 +4,10 @@ class UsersDataSource: NSObject, UITableViewDataSource {
 
   private var users: [User] = []
 
+  func replace(users: [User]) {
+    self.users = users
+  }
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return users.count
   }
