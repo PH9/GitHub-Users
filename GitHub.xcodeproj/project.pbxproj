@@ -15,6 +15,8 @@
 		16455434244349F0009A7BD8 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455433244349F0009A7BD8 /* WebServiceTests.swift */; };
 		1645543724435618009A7BD8 /* WebServiceTestsPredefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455435244355FC009A7BD8 /* WebServiceTestsPredefined.swift */; };
 		16455439244357D2009A7BD8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455438244357D2009A7BD8 /* ActivityIndicator.swift */; };
+		1660177324436CAF00799A82 /* FetchingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1660177124436CAE00799A82 /* FetchingCell.xib */; };
+		1660177424436CAF00799A82 /* FetchingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660177224436CAF00799A82 /* FetchingCell.swift */; };
 		167927B62442D50D00818F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B52442D50D00818F67 /* AppDelegate.swift */; };
 		167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B72442D50D00818F67 /* SceneDelegate.swift */; };
 		167927BA2442D50D00818F67 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B92442D50D00818F67 /* UserViewController.swift */; };
@@ -51,6 +53,8 @@
 		16455433244349F0009A7BD8 /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		16455435244355FC009A7BD8 /* WebServiceTestsPredefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTestsPredefined.swift; sourceTree = "<group>"; };
 		16455438244357D2009A7BD8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		1660177124436CAE00799A82 /* FetchingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchingCell.xib; sourceTree = "<group>"; };
+		1660177224436CAF00799A82 /* FetchingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingCell.swift; sourceTree = "<group>"; };
 		167927B22442D50D00818F67 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167927B52442D50D00818F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167927B72442D50D00818F67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			children = (
 				16455438244357D2009A7BD8 /* ActivityIndicator.swift */,
 				162B82D12442DF4300C45229 /* AppError.swift */,
+				1660177224436CAF00799A82 /* FetchingCell.swift */,
+				1660177124436CAE00799A82 /* FetchingCell.xib */,
 				1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */,
 				1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */,
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
@@ -257,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167927C22442D50D00818F67 /* LaunchScreen.storyboard in Resources */,
+				1660177324436CAF00799A82 /* FetchingCell.xib in Resources */,
 				167927BF2442D50D00818F67 /* Assets.xcassets in Resources */,
 				167927BD2442D50D00818F67 /* User.storyboard in Resources */,
 			);
@@ -336,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167927BA2442D50D00818F67 /* UserViewController.swift in Sources */,
+				1660177424436CAF00799A82 /* FetchingCell.swift in Sources */,
 				1688AC172442E6B300A6B692 /* UsersViewModel.swift in Sources */,
 				1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */,
 				162B82D22442DF4300C45229 /* AppError.swift in Sources */,
