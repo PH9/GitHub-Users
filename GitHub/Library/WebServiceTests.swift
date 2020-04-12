@@ -95,7 +95,28 @@ class WebServiceTests: XCTestCase {
     }
 
     wait(for: [callbackExpectation], timeout: 1)
+  }
 
-    XCTAssertEqual(1, spyDataTask.resumeCalledCount)
+  func test_cannotParsingData() {
+    let webService = WebService()
+    let spyDataTask = SpyURLSessionDataTask()
+    let spySession = SpySession(spy: spyDataTask)
+    spySession.responseData = "{}".data(using: .utf8)!
+    webService.session = spySession
+    let dummyRequest = DummyRequest()
+
+    let callbackExpectation = expectation(description: "should callback")
+    webService.request(request: dummyRequest) { result in
+      switch result {
+      case .success(let response):
+        assertionFailure("should not got failure success, but got error: \(response)")
+      case .failure(let error):
+        XCTAssertEqual("Unexpected response, please try again later", error.message)
+      }
+
+      callbackExpectation.fulfill()
+    }
+
+    wait(for: [callbackExpectation], timeout: 1)
   }
 }
