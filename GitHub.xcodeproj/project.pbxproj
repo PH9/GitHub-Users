@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		160680052443A5A3003EEC64 /* UsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160680042443A5A3003EEC64 /* UsersViewModelTests.swift */; };
 		160680092443AA03003EEC64 /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160680072443AA01003EEC64 /* MockWebService.swift */; };
+		1606800C2443AB9F003EEC64 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606800A2443AB9D003EEC64 /* TestCase.swift */; };
 		162B82D22442DF4300C45229 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D12442DF4300C45229 /* AppError.swift */; };
 		162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D42442E42000C45229 /* UsersDataSrouce.swift */; };
 		1645542E2443472D009A7BD8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645542D2443472D009A7BD8 /* WebService.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		160680042443A5A3003EEC64 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
 		160680072443AA01003EEC64 /* MockWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebService.swift; sourceTree = "<group>"; };
+		1606800A2443AB9D003EEC64 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		162B82D12442DF4300C45229 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		162B82D42442E42000C45229 /* UsersDataSrouce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSrouce.swift; sourceTree = "<group>"; };
 		1645542D2443472D009A7BD8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -189,13 +191,14 @@
 		1697B97924433F0D00A09CAB /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				160680062443A9E5003EEC64 /* WebService */,
 				162B82D12442DF4300C45229 /* AppError.swift */,
 				1660177524438B0500799A82 /* Extension.swift */,
 				1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */,
 				1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */,
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
+				1606800A2443AB9D003EEC64 /* TestCase.swift */,
 				1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */,
+				160680062443A9E5003EEC64 /* WebService */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				160680052443A5A3003EEC64 /* UsersViewModelTests.swift in Sources */,
 				1645543724435618009A7BD8 /* WebServiceTestsPredefined.swift in Sources */,
 				1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */,
+				1606800C2443AB9F003EEC64 /* TestCase.swift in Sources */,
 				1697B981244343FC00A09CAB /* UserViewControllerTests.swift in Sources */,
 				16455434244349F0009A7BD8 /* WebServiceTests.swift in Sources */,
 			);
