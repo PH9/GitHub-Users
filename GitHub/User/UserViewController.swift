@@ -54,7 +54,7 @@ class UserViewController: UITableViewController {
 extension UserViewController: UsersDataSourceDelegate {
 
   func usersDataSource(wantToFetchNewUser atId: Int) {
-    // TODO: Call ViewModel to fetch newUsers
+    viewModel.getUsers(sinceId: atId)
   }
 
 }
