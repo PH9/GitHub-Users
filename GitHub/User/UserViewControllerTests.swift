@@ -1,7 +1,7 @@
 import XCTest
 @testable import GitHub
 
-class UserViewControllerTests: XCTestCase {
+class UserViewControllerTests: TestCase {
 
   class SpyViewModel: UsersViewModel {
 

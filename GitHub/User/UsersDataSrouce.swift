@@ -16,7 +16,7 @@ class UsersDataSource: NSObject, UITableViewDataSource {
 
   func showFetchingCell() {
     addEmptySection(section: Section.fetching.rawValue)
-    values.insert([true], at: Section.fetching.rawValue)z
+    values.insert([true], at: Section.fetching.rawValue)
   }
 
   func addEmptySection(section: Int) {

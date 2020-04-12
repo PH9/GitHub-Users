@@ -10,6 +10,8 @@
 		160680052443A5A3003EEC64 /* UsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160680042443A5A3003EEC64 /* UsersViewModelTests.swift */; };
 		160680092443AA03003EEC64 /* MockWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160680072443AA01003EEC64 /* MockWebService.swift */; };
 		1606800C2443AB9F003EEC64 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606800A2443AB9D003EEC64 /* TestCase.swift */; };
+		1606800E2443AC4C003EEC64 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1606800D2443AC4C003EEC64 /* FBSnapshotTestCase.framework */; };
+		160680102443ADEE003EEC64 /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1606800D2443AC4C003EEC64 /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		162B82D22442DF4300C45229 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D12442DF4300C45229 /* AppError.swift */; };
 		162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D42442E42000C45229 /* UsersDataSrouce.swift */; };
 		1645542E2443472D009A7BD8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645542D2443472D009A7BD8 /* WebService.swift */; };
@@ -47,10 +49,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1606800F2443ADE3003EEC64 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				160680102443ADEE003EEC64 /* FBSnapshotTestCase.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		160680042443A5A3003EEC64 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
 		160680072443AA01003EEC64 /* MockWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebService.swift; sourceTree = "<group>"; };
 		1606800A2443AB9D003EEC64 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		1606800D2443AC4C003EEC64 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		162B82D12442DF4300C45229 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		162B82D42442E42000C45229 /* UsersDataSrouce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSrouce.swift; sourceTree = "<group>"; };
 		1645542D2443472D009A7BD8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -95,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1606800E2443AC4C003EEC64 /* FBSnapshotTestCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +200,7 @@
 		1697B9732442F3E100A09CAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1606800D2443AC4C003EEC64 /* FBSnapshotTestCase.framework */,
 				1697B9742442F3E200A09CAB /* Kingfisher.framework */,
 			);
 			name = Frameworks;
@@ -233,6 +251,7 @@
 				167927C42442D50D00818F67 /* Sources */,
 				167927C52442D50D00818F67 /* Frameworks */,
 				167927C62442D50D00818F67 /* Resources */,
+				1606800F2443ADE3003EEC64 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -592,6 +611,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -613,6 +636,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
