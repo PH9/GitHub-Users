@@ -24,6 +24,17 @@ class GitHubUserViewController: UITableViewController {
         completion(.failure(appError))
         return
       }
+
+      guard
+        let data = data,
+        let users = try? JSONDecoder().decode([User].self, from: data)
+        else {
+          let appError = AppError(message: "Unexpected response, please try again later")
+          completion(.failure(appError))
+          return
+      }
+
+      completion(.success(users))
     }
 
     task.resume()
