@@ -23,10 +23,32 @@ class UserViewController: UITableViewController {
   }
 
   private func getUsersSuccess(_ users: [User]) {
-    dataSource.replace(users: users)
-    DispatchQueue.main.async {
-      self.tableView.reloadData()
+    defer {
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
     }
+
+    if users.count == 0 {
+      emptyUserHandler()
+      return
+    }
+    dataSource.replace(users: users)
+  }
+
+  private func emptyUserHandler() {
+    let size = CGSize(width: view.bounds.size.width, height: view.bounds.size.height)
+    let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
+    let messageLabel = UILabel(frame: rect)
+    messageLabel.text = "GitHub have no user"
+    messageLabel.numberOfLines = 0
+    messageLabel.textAlignment = .center
+    messageLabel.font = .preferredFont(forTextStyle: .body)
+    messageLabel.sizeToFit()
+    messageLabel.adjustsFontForContentSizeCategory = true
+
+    tableView.backgroundView = messageLabel
+    tableView.separatorStyle = .none
   }
 
   private func getUsersFailure(_ error: AppError) {
