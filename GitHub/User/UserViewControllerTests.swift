@@ -26,7 +26,7 @@ class UserViewControllerTests: XCTestCase {
     let spy = SpyViewModel()
     vc?.viewModel = spy
 
-    _ = vc?.view
+    _ = vc.view
 
     XCTAssertEqual(0, spy.latestSinceUserId)
     XCTAssertEqual(1, spy.getUsersCalledCount)
@@ -36,11 +36,19 @@ class UserViewControllerTests: XCTestCase {
     let spy = SpyViewModel()
     vc?.viewModel = spy
 
-    _ = vc?.view
+    _ = vc.view
 
     vc?.usersDataSource(wantToFetchNewUser: 888)
 
     XCTAssertEqual(888, spy.latestSinceUserId)
     XCTAssertEqual(2, spy.getUsersCalledCount)
+  }
+
+  func test_tableBingingShouldSetupCorrectly() {
+    _ = vc.view
+
+    let userDataSource = vc.tableView.dataSource as? UsersDataSource
+    XCTAssertEqual(vc, userDataSource?.delegeate as? UserViewController)
+    XCTAssertEqual(userDataSource, vc.tableView.prefetchDataSource as? UsersDataSource)
   }
 }
