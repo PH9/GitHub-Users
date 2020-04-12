@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class UserCell: UITableViewCell {
 
@@ -14,7 +15,7 @@ class UserCell: UITableViewCell {
   }
 
   func configureWith(user: User) {
-    // TODO: Set avatar image
+    avatarImage.kf.setImage(with: URL(string: user.avatar_url)!)
     usernameLabel.text = user.login
     urlLabel.text = user.html_url
     accountTypeLabel.text = user.type
