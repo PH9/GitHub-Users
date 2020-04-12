@@ -20,6 +20,7 @@
 		1688AC1B2442EA4400A6B692 /* SimpleWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */; };
 		1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B22442D8D9003DF17A /* UserCell.swift */; };
 		1690B5B52442DB48003DF17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B42442DB48003DF17A /* User.swift */; };
+		1697B9752442F3E200A09CAB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1697B9742442F3E200A09CAB /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWebViewViewController.swift; sourceTree = "<group>"; };
 		1690B5B22442D8D9003DF17A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		1690B5B42442DB48003DF17A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1697B9742442F3E200A09CAB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1697B9752442F3E200A09CAB /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 				167927B42442D50D00818F67 /* GitHub */,
 				167927CB2442D50D00818F67 /* GitHubTests */,
 				167927B32442D50D00818F67 /* Products */,
+				1697B9732442F3E100A09CAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 			path = GitHubTests;
 			sourceTree = "<group>";
 		};
+		1697B9732442F3E100A09CAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1697B9742442F3E200A09CAB /* Kingfisher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +145,7 @@
 			buildConfigurationList = 167927D12442D50D00818F67 /* Build configuration list for PBXNativeTarget "GitHub" */;
 			buildPhases = (
 				1688AC1D2442F1EA00A6B692 /* Swiftlint */,
+				1697B9782442F44F00A09CAB /* Carthage */,
 				167927AE2442D50D00818F67 /* Sources */,
 				167927AF2442D50D00818F67 /* Frameworks */,
 				167927B02442D50D00818F67 /* Resources */,
@@ -259,6 +272,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		1697B9782442F44F00A09CAB /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -436,6 +469,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +490,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
