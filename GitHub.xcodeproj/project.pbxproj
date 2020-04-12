@@ -19,7 +19,6 @@
 		167927BD2442D50D00818F67 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167927BB2442D50D00818F67 /* User.storyboard */; };
 		167927BF2442D50D00818F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167927BE2442D50D00818F67 /* Assets.xcassets */; };
 		167927C22442D50D00818F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167927C02442D50D00818F67 /* LaunchScreen.storyboard */; };
-		167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927CC2442D50D00818F67 /* GitHub_UsersTests.swift */; };
 		1688AC172442E6B300A6B692 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688AC162442E6B300A6B692 /* UsersViewModel.swift */; };
 		1688AC1B2442EA4400A6B692 /* SimpleWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */; };
 		1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B22442D8D9003DF17A /* UserCell.swift */; };
@@ -57,7 +56,6 @@
 		167927C12442D50D00818F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		167927C32442D50D00818F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		167927C82442D50D00818F67 /* GitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		167927CC2442D50D00818F67 /* GitHub_UsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_UsersTests.swift; sourceTree = "<group>"; };
 		167927CE2442D50D00818F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1688AC162442E6B300A6B692 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWebViewViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 		167927CB2442D50D00818F67 /* GitHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				167927CC2442D50D00818F67 /* GitHub_UsersTests.swift */,
 				167927CE2442D50D00818F67 /* Info.plist */,
 			);
 			path = GitHubTests;
@@ -353,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				16455432244348B5009A7BD8 /* UsersRequestTests.swift in Sources */,
-				167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */,
 				1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */,
 				1697B981244343FC00A09CAB /* UserViewControllerTests.swift in Sources */,
 				16455434244349F0009A7BD8 /* WebServiceTests.swift in Sources */,
