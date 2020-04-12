@@ -40,7 +40,10 @@ class UserViewController: UITableViewController {
       return
     }
     dataSource.replace(users: users)
-    tableView.reloadData()
+
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
   }
 
   private func showFullPage(message: String) {
