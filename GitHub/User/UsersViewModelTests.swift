@@ -52,10 +52,34 @@ class UsersViewModelTests: XCTestCase {
       XCTAssertEqual(user.site_admin, users.last?.site_admin)
       getUsersSuccessExpectation.fulfill()
     }
+    viewModel.getUsersFailure = { _ in
+      assertionFailure("Should not call this even once")
+    }
 
     viewModel.getUsers()
 
     wait(for: [getUsersSuccessExpectation], timeout: 1)
+  }
+
+  func test_getUserFail_shouldCallGetUsersFailure() {
+    let error = AppError(message: "This is error message")
+    WebService.shared = MockWebService(error: error)
+
+    let viewModel = UsersViewModel()
+
+    viewModel.getUsersSuccess = { _ in
+      assertionFailure("Should not call this :)")
+    }
+
+    let getUsersFailureExpectation = expectation(description: "")
+    viewModel.getUsersFailure = { errorMessage in
+      XCTAssertEqual(error.message, errorMessage)
+      getUsersFailureExpectation.fulfill()
+    }
+
+    viewModel.getUsers()
+
+    wait(for: [getUsersFailureExpectation], timeout: 1)
   }
 
 }
