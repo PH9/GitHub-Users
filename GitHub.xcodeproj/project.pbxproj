@@ -12,6 +12,7 @@
 		1606800C2443AB9F003EEC64 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606800A2443AB9D003EEC64 /* TestCase.swift */; };
 		1606800E2443AC4C003EEC64 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1606800D2443AC4C003EEC64 /* FBSnapshotTestCase.framework */; };
 		160680102443ADEE003EEC64 /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1606800D2443AC4C003EEC64 /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		160680122443AED0003EEC64 /* TrailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160680112443AED0003EEC64 /* TrailController.swift */; };
 		162B82D22442DF4300C45229 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D12442DF4300C45229 /* AppError.swift */; };
 		162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D42442E42000C45229 /* UsersDataSrouce.swift */; };
 		1645542E2443472D009A7BD8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645542D2443472D009A7BD8 /* WebService.swift */; };
@@ -67,6 +68,7 @@
 		160680072443AA01003EEC64 /* MockWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebService.swift; sourceTree = "<group>"; };
 		1606800A2443AB9D003EEC64 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		1606800D2443AC4C003EEC64 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		160680112443AED0003EEC64 /* TrailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailController.swift; sourceTree = "<group>"; };
 		162B82D12442DF4300C45229 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		162B82D42442E42000C45229 /* UsersDataSrouce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSrouce.swift; sourceTree = "<group>"; };
 		1645542D2443472D009A7BD8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				1606800A2443AB9D003EEC64 /* TestCase.swift */,
 				1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */,
 				160680062443A9E5003EEC64 /* WebService */,
+				160680112443AED0003EEC64 /* TrailController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160680122443AED0003EEC64 /* TrailController.swift in Sources */,
 				167927BA2442D50D00818F67 /* UserViewController.swift in Sources */,
 				1660177424436CAF00799A82 /* FetchingCell.swift in Sources */,
 				1688AC172442E6B300A6B692 /* UsersViewModel.swift in Sources */,
