@@ -14,8 +14,19 @@ class GitHubUserViewController: UITableViewController {
     }
   }
 
-  private func getUsers(completionHandler completion: @escaping (Result<[User], Error>) -> Void) {
+  private func getUsers(completionHandler completion: @escaping (Result<[User], AppError>) -> Void) {
+    let session = URLSession.shared
+    let url = URL(string: "https://api.github.com/users")!
 
+    let task = session.dataTask(with: url) { data, response, error in
+      if let error = error {
+        let appError = AppError(error: error)
+        completion(.failure(appError))
+        return
+      }
+    }
+
+    task.resume()
   }
 }
 
