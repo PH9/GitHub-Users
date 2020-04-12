@@ -49,7 +49,8 @@ class WebServiceTests: XCTestCase {
     let webService = WebService()
     let spyDataTask = SpyURLSessionDataTask()
     let spySession = SpySession(spy: spyDataTask)
-    spySession.responseError = NSError(domain: "", code: -1, userInfo: nil)
+    spySession.responseError = NSError(domain: "", code: -2, userInfo: nil)
+    spySession.responseData = "{ \"isBool\": false }".data(using: .utf8)!
     webService.session = spySession
     let dummyRequest = DummyRequest()
 
@@ -58,8 +59,8 @@ class WebServiceTests: XCTestCase {
       switch result {
       case .success:
         assertionFailure("should not got success result")
-      case .failure:
-        break
+      case .failure(let error):
+        XCTAssertEqual(-2, error.code)
       }
 
       callbackExpectation.fulfill()
