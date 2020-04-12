@@ -12,6 +12,7 @@
 		1645542E2443472D009A7BD8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645542D2443472D009A7BD8 /* WebService.swift */; };
 		1645543024434849009A7BD8 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645542F24434849009A7BD8 /* UsersRequest.swift */; };
 		16455432244348B5009A7BD8 /* UsersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455431244348B5009A7BD8 /* UsersRequestTests.swift */; };
+		16455434244349F0009A7BD8 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455433244349F0009A7BD8 /* WebServiceTests.swift */; };
 		167927B62442D50D00818F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B52442D50D00818F67 /* AppDelegate.swift */; };
 		167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B72442D50D00818F67 /* SceneDelegate.swift */; };
 		167927BA2442D50D00818F67 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B92442D50D00818F67 /* UserViewController.swift */; };
@@ -46,6 +47,7 @@
 		1645542D2443472D009A7BD8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		1645542F24434849009A7BD8 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
 		16455431244348B5009A7BD8 /* UsersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequestTests.swift; sourceTree = "<group>"; };
+		16455433244349F0009A7BD8 /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		167927B22442D50D00818F67 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167927B52442D50D00818F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167927B72442D50D00818F67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
 				1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */,
 				1645542D2443472D009A7BD8 /* WebService.swift */,
+				16455433244349F0009A7BD8 /* WebServiceTests.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */,
 				1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */,
 				1697B981244343FC00A09CAB /* UserViewControllerTests.swift in Sources */,
+				16455434244349F0009A7BD8 /* WebServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

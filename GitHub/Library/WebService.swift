@@ -9,13 +9,13 @@ protocol Requestable {
 
 class WebService {
 
-  static var shared = WebService()
+  static let shared = WebService()
+
+  var session = URLSession.shared
 
   func request<R: Requestable>(
     request: R,
     completionHandler completion: @escaping (Result<R.ResponseType, AppError>) -> Void) {
-    let session = URLSession.shared
-
     let task = session.dataTask(with: request.url) { data, _, error in
       if let error = error {
         let appError = AppError(error: error)
