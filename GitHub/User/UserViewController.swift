@@ -2,7 +2,7 @@ import UIKit
 
 class UserViewController: UITableViewController {
 
-  let viewModel = UsersViewModel()
+  var viewModel = UsersViewModel()
   let dataSource = UsersDataSource()
 
   override func viewDidLoad() {

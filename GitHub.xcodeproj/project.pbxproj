@@ -24,6 +24,7 @@
 		1697B97B24433F3800A09CAB /* UIImageView+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */; };
 		1697B97D2443402B00A09CAB /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */; };
 		1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */; };
+		1697B981244343FC00A09CAB /* UserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B980244343FC00A09CAB /* UserViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
 		1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
 		1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcherTests.swift; sourceTree = "<group>"; };
+		1697B980244343FC00A09CAB /* UserViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				162B82D42442E42000C45229 /* UsersDataSrouce.swift */,
 				1688AC162442E6B300A6B692 /* UsersViewModel.swift */,
 				167927B92442D50D00818F67 /* UserViewController.swift */,
+				1697B980244343FC00A09CAB /* UserViewControllerTests.swift */,
 				167927BB2442D50D00818F67 /* User.storyboard */,
 			);
 			path = User;
@@ -337,6 +340,7 @@
 			files = (
 				167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */,
 				1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */,
+				1697B981244343FC00A09CAB /* UserViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
