@@ -9,7 +9,7 @@ protocol Requestable {
 
 class WebService {
 
-  static let shared = WebService()
+  static var shared = WebService()
 
   var session = URLSession.shared
 
@@ -55,6 +55,7 @@ class WebService {
     task.resume()
   }
 
+  @inline(__always)
   private func createURLRequest<R: Requestable>(request: R) -> URLRequest {
     let urlRequest = URLRequest(url: request.url)
     return urlRequest

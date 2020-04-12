@@ -36,6 +36,6 @@ class UserViewControllerTests: XCTestCase {
     _ = vc.view
 
     let userDataSource = vc.tableView.dataSource as? UsersDataSource
-    XCTAssertEqual(userDataSource, vc.tableView.prefetchDataSource as? UsersDataSource)
+    XCTAssertNotNil(userDataSource)
   }
 }
