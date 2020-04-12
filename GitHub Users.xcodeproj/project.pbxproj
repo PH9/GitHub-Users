@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162B82D22442DF4300C45229 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D12442DF4300C45229 /* AppError.swift */; };
 		167927B62442D50D00818F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B52442D50D00818F67 /* AppDelegate.swift */; };
 		167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B72442D50D00818F67 /* SceneDelegate.swift */; };
 		167927BA2442D50D00818F67 /* GitHubUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B92442D50D00818F67 /* GitHubUserViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		162B82D12442DF4300C45229 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		167927B22442D50D00818F67 /* GitHub Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Users.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		167927B52442D50D00818F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167927B72442D50D00818F67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				167927BE2442D50D00818F67 /* Assets.xcassets */,
 				167927BB2442D50D00818F67 /* GitHubUser.storyboard */,
 				167927C02442D50D00818F67 /* LaunchScreen.storyboard */,
+				162B82D12442DF4300C45229 /* AppError.swift */,
 			);
 			path = "GitHub Users";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				167927BA2442D50D00818F67 /* GitHubUserViewController.swift in Sources */,
 				1690B5B32442D8D9003DF17A /* GitHubUserCell.swift in Sources */,
+				162B82D22442DF4300C45229 /* AppError.swift in Sources */,
 				167927B62442D50D00818F67 /* AppDelegate.swift in Sources */,
 				1690B5B52442DB48003DF17A /* User.swift in Sources */,
 				167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */,
