@@ -12,4 +12,8 @@ class GitHubUserCell: UITableViewCell {
   @IBAction func favoriteButtonTapped(_ sender: Any) {
   }
 
+  static var reusableIdentifier: String {
+    String(describing: self)
+  }
+
 }
