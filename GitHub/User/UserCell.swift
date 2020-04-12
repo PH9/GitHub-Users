@@ -14,6 +14,7 @@ class UserCell: UITableViewCell {
   @IBOutlet var regularConstraints: [NSLayoutConstraint]!
   @IBOutlet var commonConstrains: [NSLayoutConstraint]!
   private var largeTextConstraints: [NSLayoutConstraint] = []
+  private var user: User!
 
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -54,15 +55,23 @@ class UserCell: UITableViewCell {
   }
 
   @IBAction func favoriteButtonTapped(_ sender: Any) {
-    // TODO: Favorite and unfavorite
+    let isFavorite = !UserDefaults.standard.bool(forKey: "favorite-user-id-\(user.id)")
+    UserDefaults.standard.set(isFavorite, forKey: "favorite-user-id-\(user.id)")
+    let buttonTitle = isFavorite ? "Unfavorite" : "Favorite"
+    favoriteButton.setTitle(buttonTitle, for: .normal)
   }
 
   func configureWith(user: User) {
+    self.user = user
     avatarImage.setImage(url: URL(string: user.avatar_url)!)
     usernameLabel.text = user.login
     urlLabel.text = user.html_url
     accountTypeLabel.text = user.type
     adminStatusLabel.text = String(user.site_admin)
+
+    let isFavorite = UserDefaults.standard.bool(forKey: "favorite-user-id-\(user.id)")
+    let buttonTitle = isFavorite ? "Unfavorite" : "Favorite"
+    favoriteButton.setTitle(buttonTitle, for: .normal)
   }
 
   override func setSelected(_ selected: Bool, animated: Bool) {
