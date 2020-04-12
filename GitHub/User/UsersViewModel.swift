@@ -4,9 +4,8 @@ class UsersViewModel {
 
   private var users: [User] = []
 
-  var getUserSuccess: (([User]) -> Void)?
-  var getUserFailure: ((String) -> Void)?
-  var showErrorCell: ((String) -> Void)?
+  var getUsersSuccess: (([User]) -> Void)?
+  var getUsersFailure: ((String) -> Void)?
 
   private var isFetching = false
 
@@ -26,14 +25,9 @@ class UsersViewModel {
       switch result {
       case .success(let users):
         self.users += users
-        self.getUserSuccess?(self.users)
+        self.getUsersSuccess?(self.users)
       case .failure(let error):
-        if self.users.count > 0 {
-          self.showErrorCell?(error.message)
-          return
-        }
-
-        self.getUserFailure?(error.message)
+        self.getUsersFailure?(error.message)
       }
     }
 

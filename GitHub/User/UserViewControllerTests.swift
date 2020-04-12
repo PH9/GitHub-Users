@@ -38,8 +38,6 @@ class UserViewControllerTests: XCTestCase {
 
     _ = vc.view
 
-    vc?.usersDataSource(wantToFetchNewUser: 888)
-
     XCTAssertEqual(888, spy.latestSinceUserId)
     XCTAssertEqual(2, spy.getUsersCalledCount)
   }
@@ -48,7 +46,6 @@ class UserViewControllerTests: XCTestCase {
     _ = vc.view
 
     let userDataSource = vc.tableView.dataSource as? UsersDataSource
-    XCTAssertEqual(vc, userDataSource?.delegeate as? UserViewController)
     XCTAssertEqual(userDataSource, vc.tableView.prefetchDataSource as? UsersDataSource)
   }
 }

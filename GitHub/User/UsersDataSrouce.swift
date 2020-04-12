@@ -5,7 +5,6 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
   enum Section: Int {
     case user
     case fetching
-    case error
   }
 
   private(set) var values: [[Any]] = [[]]
@@ -18,13 +17,6 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
   func showFetchingCell() {
     addEmptySection(section: Section.fetching.rawValue)
     values.insert([true], at: Section.fetching.rawValue)
-    values.remove(at: Section.error.rawValue)
-  }
-
-  func showErrorCell(message: String) {
-    addEmptySection(section: Section.error.rawValue)
-    values.insert([message], at: Section.error.rawValue)
-    values.remove(at: Section.fetching.rawValue)
   }
 
   func addEmptySection(section: Int) {
@@ -57,13 +49,6 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
     if indexPath.section == Section.fetching.rawValue {
       let cell = tableView.dequeue(FetchingCell.self, for: indexPath)
       cell.activityIndicatorView.startAnimating()
-      return cell
-    }
-
-    if indexPath.section == Section.error.rawValue {
-      let cell = tableView.dequeue(ErrorCell.self, for: indexPath)
-      let message = value as? String
-      cell.configureWith(message: message!)
       return cell
     }
 

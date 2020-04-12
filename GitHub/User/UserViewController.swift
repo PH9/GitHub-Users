@@ -2,14 +2,23 @@ import UIKit
 
 class UserViewController: UITableViewController {
 
+  private let spinner = UIActivityIndicatorView(style: .gray)
+
   var viewModel = UsersViewModel()
   let dataSource = UsersDataSource()
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupView()
     binding()
     registerCell()
     viewModel.getUsers()
+  }
+
+  private func setupView() {
+    spinner.frame = CGRect(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 40)
+    spinner.startAnimating()
+    tableView.tableFooterView = spinner
 
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 172.5
@@ -18,14 +27,12 @@ class UserViewController: UITableViewController {
   private func binding() {
     tableView.dataSource = dataSource
     tableView.prefetchDataSource = dataSource
-    viewModel.getUserSuccess = getUsersSuccess(_:)
-    viewModel.getUserFailure = getUsersFailure(_:)
-    viewModel.showErrorCell = showErrorCell(_:)
+    viewModel.getUsersSuccess = getUsersSuccess(_:)
+    viewModel.getUsersFailure = getUsersFailure(_:)
   }
 
   private func registerCell() {
     tableView.register(FetchingCell.self)
-    tableView.register(ErrorCell.self)
   }
 
   private func getUsersSuccess(_ users: [User]) {
@@ -54,12 +61,7 @@ class UserViewController: UITableViewController {
   }
 
   private func getUsersFailure(_ message: String) {
-    showFullPage(message: message)
-  }
-
-  private func showErrorCell(_ message: String) {
-    dataSource.showErrorCell(message: message)
-    tableView.reloadData()
+    spinner.stopAnimating()
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -83,12 +85,21 @@ class UserViewController: UITableViewController {
     tableView.reloadData()
   }
 
-  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
-      dataSource.showFetchingCell()
-      tableView.reloadData()
+  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    let lastSectionIndex = tableView.numberOfSections - 1
+    let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
+    if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
+      spinner.stopAnimating()
       viewModel.getNewUsers()
     }
+  }
+
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+      spinner.startAnimating()
+      viewModel.getNewUsers()
+    }
+
   }
 
 }
