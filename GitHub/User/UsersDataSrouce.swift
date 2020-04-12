@@ -14,6 +14,9 @@ class UsersDataSource: NSObject, UITableViewDataSource {
       fatalError("Could not dequque \(UserCell.reusableIdentifier) for \(indexPath)")
     }
 
+    let user = users[indexPath.row]
+    cell.configureWith(user: user)
+
     return cell
   }
 }
