@@ -21,6 +21,7 @@
 		1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B22442D8D9003DF17A /* UserCell.swift */; };
 		1690B5B52442DB48003DF17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B42442DB48003DF17A /* User.swift */; };
 		1697B9752442F3E200A09CAB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1697B9742442F3E200A09CAB /* Kingfisher.framework */; };
+		1697B97B24433F3800A09CAB /* UIImageView+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		1690B5B22442D8D9003DF17A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		1690B5B42442DB48003DF17A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1697B9742442F3E200A09CAB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				162B82D12442DF4300C45229 /* AppError.swift */,
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
+				1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				1688AC172442E6B300A6B692 /* UsersViewModel.swift in Sources */,
 				1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */,
 				162B82D22442DF4300C45229 /* AppError.swift in Sources */,
+				1697B97B24433F3800A09CAB /* UIImageView+setImage.swift in Sources */,
 				1688AC1B2442EA4400A6B692 /* SimpleWebViewViewController.swift in Sources */,
 				162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */,
 				167927B62442D50D00818F67 /* AppDelegate.swift in Sources */,
