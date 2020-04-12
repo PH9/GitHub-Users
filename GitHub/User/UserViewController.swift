@@ -24,8 +24,7 @@ class UserViewController: UITableViewController {
   }
 
   private func registerCell() {
-    let nib = UINib(nibName: FetchingCell.reusableIdentifier, bundle: nil)
-    tableView.register(nib, forCellReuseIdentifier: FetchingCell.reusableIdentifier)
+    tableView.register(FetchingCell.self)
   }
 
   private func getUsersSuccess(_ users: [User]) {
