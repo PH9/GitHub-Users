@@ -29,6 +29,7 @@ class WebServiceTests: XCTestCase {
 
     private var spy: SpyURLSessionDataTask
 
+    var url: URL?
     var responseData: Data?
     var responseError: Error?
 
@@ -40,6 +41,7 @@ class WebServiceTests: XCTestCase {
       with url: URL,
       completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
     ) -> URLSessionDataTask {
+      self.url = url
       completionHandler(responseData, nil, responseError)
       return spy
     }
@@ -69,6 +71,7 @@ class WebServiceTests: XCTestCase {
     wait(for: [callbackExpectation], timeout: 1)
 
     XCTAssertEqual(1, spyDataTask.resumeCalledCount)
+    XCTAssertEqual("https://github.com/ph9/cv", spySession.url?.absoluteString)
   }
 
   func test_shouldAbleToParsingData() {
