@@ -7,6 +7,7 @@ class UserViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    dataSource.delegeate = self
     tableView.dataSource = dataSource
     bidingViewModel()
     viewModel.getUsers()
@@ -38,5 +39,12 @@ class UserViewController: UITableViewController {
     webView.configureWith(url: url)
 
     present(webView, animated: true, completion: nil)
+  }
+}
+
+extension UserViewController: UsersDataSourceDelegate {
+
+  func usersDataSource(wantToFetchNewUser atId: Int) {
+    // TODO: Call ViewModel to fetch newUsers
   }
 }
