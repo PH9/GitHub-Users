@@ -16,7 +16,6 @@ class UserViewController: UITableViewController {
   }
 
   private func binding() {
-    dataSource.delegeate = self
     tableView.dataSource = dataSource
     tableView.prefetchDataSource = dataSource
     viewModel.getUserSuccess = getUsersSuccess(_:)
@@ -78,12 +77,12 @@ class UserViewController: UITableViewController {
     tableView.reloadData()
   }
 
-}
-
-extension UserViewController: UsersDataSourceDelegate {
-
-  func usersDataSource(wantToFetchNewUser atId: Int) {
-    viewModel.getUsers(sinceId: atId)
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+      dataSource.isFetching = true
+      tableView.reloadData()
+      viewModel.getNewUsers()
+    }
   }
 
 }

@@ -1,15 +1,12 @@
 import UIKit
 
-protocol UsersDataSourceDelegate: class {
-  func usersDataSource(wantToFetchNewUser atId: Int)
-}
-
 class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePrefetching {
 
   private(set) var users: [User] = []
-  weak var delegeate: UsersDataSourceDelegate?
+  var isFetching = true
 
   func replace(users: [User]) {
+    isFetching = false
     self.users = users
   }
 
@@ -19,7 +16,7 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 1 {
-      return 0
+      return isFetching ? 1 : 0
     }
 
     return users.count
@@ -32,6 +29,8 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
           fatalError("Could not dequeue \(FetchingCell.reusableIdentifier) for \(indexPath)")
       }
 
+      cell.activityIndicatorView.startAnimating()
+
       return cell
     }
 
@@ -43,21 +42,8 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
     let index = indexPath.row
     let user = users[index]
     cell.configureWith(user: user)
-    prefetchNewDataIfNeeded(index: index)
 
     return cell
-  }
-
-  private func prefetchNewDataIfNeeded(index: Int) {
-    guard index >= users.count - 5 else {
-      return
-    }
-
-    guard let nextId = users.last?.id else {
-      return
-    }
-
-    delegeate?.usersDataSource(wantToFetchNewUser: nextId)
   }
 
   func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
