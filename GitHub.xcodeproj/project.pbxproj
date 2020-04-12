@@ -14,6 +14,7 @@
 		16455432244348B5009A7BD8 /* UsersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455431244348B5009A7BD8 /* UsersRequestTests.swift */; };
 		16455434244349F0009A7BD8 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455433244349F0009A7BD8 /* WebServiceTests.swift */; };
 		1645543724435618009A7BD8 /* WebServiceTestsPredefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455435244355FC009A7BD8 /* WebServiceTestsPredefined.swift */; };
+		16455439244357D2009A7BD8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455438244357D2009A7BD8 /* ActivityIndicator.swift */; };
 		167927B62442D50D00818F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B52442D50D00818F67 /* AppDelegate.swift */; };
 		167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B72442D50D00818F67 /* SceneDelegate.swift */; };
 		167927BA2442D50D00818F67 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B92442D50D00818F67 /* UserViewController.swift */; };
@@ -49,6 +50,7 @@
 		16455431244348B5009A7BD8 /* UsersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequestTests.swift; sourceTree = "<group>"; };
 		16455433244349F0009A7BD8 /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		16455435244355FC009A7BD8 /* WebServiceTestsPredefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTestsPredefined.swift; sourceTree = "<group>"; };
+		16455438244357D2009A7BD8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		167927B22442D50D00818F67 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167927B52442D50D00818F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167927B72442D50D00818F67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		1697B97924433F0D00A09CAB /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				16455438244357D2009A7BD8 /* ActivityIndicator.swift */,
 				162B82D12442DF4300C45229 /* AppError.swift */,
 				1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */,
 				1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */,
@@ -336,6 +339,7 @@
 				1688AC172442E6B300A6B692 /* UsersViewModel.swift in Sources */,
 				1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */,
 				162B82D22442DF4300C45229 /* AppError.swift in Sources */,
+				16455439244357D2009A7BD8 /* ActivityIndicator.swift in Sources */,
 				1697B97B24433F3800A09CAB /* UIImageView+setImage.swift in Sources */,
 				1688AC1B2442EA4400A6B692 /* SimpleWebViewViewController.swift in Sources */,
 				1645542E2443472D009A7BD8 /* WebService.swift in Sources */,
