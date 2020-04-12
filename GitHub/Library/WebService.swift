@@ -16,23 +16,39 @@ class WebService {
   func request<R: Requestable>(
     request: R,
     completionHandler completion: @escaping (Result<R.ResponseType, AppError>) -> Void) {
-    let task = session.dataTask(with: request.url) { data, _, error in
+    let task = session.dataTask(with: request.url) { data, response, error in
       if let error = error {
         let appError = AppError(error: error)
         completion(.failure(appError))
         return
       }
 
-      guard
-        let data = data,
-        let decoded = try? JSONDecoder().decode(R.ResponseType.self, from: data)
-        else {
-          let appError = AppError(message: "Unexpected response, please try again later")
-          completion(.failure(appError))
-          return
+      guard let data = data else {
+        let appError = AppError(message: "Unexpected response, please try again later")
+        completion(.failure(appError))
+        return
       }
 
-      completion(.success(decoded))
+      guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+        if let error = try? JSONDecoder().decode(AppError.self, from: data) {
+          completion(.failure(error))
+          return
+        }
+
+        let appError = AppError(message: "")
+        completion(.failure(appError))
+        return
+      }
+
+      do {
+        let decoded = try JSONDecoder().decode(R.ResponseType.self, from: data)
+        completion(.success(decoded))
+      } catch {
+        let appError = AppError(error: error)
+        completion(.failure(appError))
+        return
+      }
+
     }
 
     task.resume()

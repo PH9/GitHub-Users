@@ -1,60 +1,22 @@
 import XCTest
 @testable import GitHub
 
-struct DummyRequest: Requestable {
-
-  typealias ResponseType = DummyStruct
-
-  let url = URL(string: "https://github.com/ph9/cv")!
-}
-
-struct DummyStruct: Decodable {
-  let isBool: Bool
-}
-
 class WebServiceTests: XCTestCase {
 
-  class SpyURLSessionDataTask: URLSessionDataTask {
+  let webService = WebService()
+  let spyDataTask = SpyURLSessionDataTask()
+  let dummyRequest = DummyRequest()
+  var spySession: SpySession!
 
-    var resumeCalledCount = 0
-
-    override init() {}
-
-    override func resume() {
-      resumeCalledCount += 1
-    }
-  }
-
-  class SpySession: URLSession {
-
-    private var spy: SpyURLSessionDataTask
-
-    var url: URL?
-    var responseData: Data?
-    var responseError: Error?
-
-    init(spy: SpyURLSessionDataTask) {
-      self.spy = spy
-    }
-
-    override func dataTask(
-      with url: URL,
-      completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
-    ) -> URLSessionDataTask {
-      self.url = url
-      completionHandler(responseData, nil, responseError)
-      return spy
-    }
+  override func setUp() {
+    super.setUp()
+    spySession = SpySession(spy: spyDataTask)
+    webService.session = spySession
   }
 
   func test_shouldCallResumeOnce_andMustGotErrorEvenDataAlsoCome() {
-    let webService = WebService()
-    let spyDataTask = SpyURLSessionDataTask()
-    let spySession = SpySession(spy: spyDataTask)
-    spySession.responseError = NSError(domain: "", code: -2, userInfo: nil)
     spySession.responseData = "{ \"isBool\": false }".data(using: .utf8)!
-    webService.session = spySession
-    let dummyRequest = DummyRequest()
+    spySession.responseError = NSError(domain: "", code: -2, userInfo: nil)
 
     let callbackExpectation = expectation(description: "should callback")
     webService.request(request: dummyRequest) { result in
@@ -75,12 +37,8 @@ class WebServiceTests: XCTestCase {
   }
 
   func test_shouldAbleToParsingData() {
-    let webService = WebService()
-    let spyDataTask = SpyURLSessionDataTask()
-    let spySession = SpySession(spy: spyDataTask)
     spySession.responseData = "{ \"isBool\": false }".data(using: .utf8)!
-    webService.session = spySession
-    let dummyRequest = DummyRequest()
+    spySession.urlResponse = SuccessHTTPURLResponse(url: dummyRequest.url)
 
     let callbackExpectation = expectation(description: "should callback")
     webService.request(request: dummyRequest) { result in
@@ -98,12 +56,8 @@ class WebServiceTests: XCTestCase {
   }
 
   func test_cannotParsingData() {
-    let webService = WebService()
-    let spyDataTask = SpyURLSessionDataTask()
-    let spySession = SpySession(spy: spyDataTask)
     spySession.responseData = "{}".data(using: .utf8)!
-    webService.session = spySession
-    let dummyRequest = DummyRequest()
+    spySession.urlResponse = SuccessHTTPURLResponse(url: dummyRequest.url)
 
     let callbackExpectation = expectation(description: "should callback")
     webService.request(request: dummyRequest) { result in
@@ -111,7 +65,7 @@ class WebServiceTests: XCTestCase {
       case .success(let response):
         assertionFailure("should not got failure success, but got error: \(response)")
       case .failure(let error):
-        XCTAssertEqual("Unexpected response, please try again later", error.message)
+        XCTAssertEqual("The data couldn’t be read because it is missing.", error.message)
       }
 
       callbackExpectation.fulfill()
