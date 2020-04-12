@@ -11,6 +11,9 @@ class UserViewController: UITableViewController {
     tableView.dataSource = dataSource
     bidingViewModel()
     viewModel.getUsers()
+
+    tableView.rowHeight = UITableView.automaticDimension
+    tableView.estimatedRowHeight = 172.5
   }
 
   private func bidingViewModel() {
@@ -40,6 +43,11 @@ class UserViewController: UITableViewController {
 
     present(webView, animated: true, completion: nil)
   }
+
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    tableView.reloadData()
+  }
+
 }
 
 extension UserViewController: UsersDataSourceDelegate {
@@ -47,4 +55,5 @@ extension UserViewController: UsersDataSourceDelegate {
   func usersDataSource(wantToFetchNewUser atId: Int) {
     // TODO: Call ViewModel to fetch newUsers
   }
+
 }
