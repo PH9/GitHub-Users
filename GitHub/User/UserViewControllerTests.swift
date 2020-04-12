@@ -32,16 +32,6 @@ class UserViewControllerTests: XCTestCase {
     XCTAssertEqual(1, spy.getUsersCalledCount)
   }
 
-  func test_whenPrefetchingWasCall_shouldCallViewModelGetUsersSinceId() {
-    let spy = SpyViewModel()
-    vc?.viewModel = spy
-
-    _ = vc.view
-
-    XCTAssertEqual(888, spy.latestSinceUserId)
-    XCTAssertEqual(2, spy.getUsersCalledCount)
-  }
-
   func test_tableBingingShouldSetupCorrectly() {
     _ = vc.view
 
