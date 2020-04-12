@@ -6,16 +6,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Git Hub User View Controller-->
+        <!--User View Controller-->
         <scene sceneID="gME-BK-P1q">
             <objects>
-                <tableViewController storyboardIdentifier="GitHubUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vbU-Ci-E5Q" customClass="GitHubUserViewController" customModule="GitHub_Users" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vbU-Ci-E5Q" customClass="UserViewController" customModule="GitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xw9-sD-okm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GitHubUserCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitHubUserCell" id="rn2-Kf-m4e" customClass="GitHubUserCell" customModule="GitHub_Users" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="rn2-Kf-m4e" customClass="UserCell" customModule="GitHub" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="172.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rn2-Kf-m4e" id="R3y-GY-7oj">

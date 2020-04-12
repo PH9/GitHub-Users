@@ -1,6 +1,6 @@
 import UIKit
 
-class GitHubUserCell: UITableViewCell {
+class UserCell: UITableViewCell {
 
   @IBOutlet weak var avatarImage: UIImageView!
   @IBOutlet weak var usernameLabel: UILabel!

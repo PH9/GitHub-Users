@@ -1,6 +1,6 @@
 import UIKit
 
-class GitHubUserViewController: UITableViewController {
+class UserViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
