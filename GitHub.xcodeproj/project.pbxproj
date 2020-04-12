@@ -16,6 +16,7 @@
 		167927BF2442D50D00818F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167927BE2442D50D00818F67 /* Assets.xcassets */; };
 		167927C22442D50D00818F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167927C02442D50D00818F67 /* LaunchScreen.storyboard */; };
 		167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927CC2442D50D00818F67 /* GitHub_UsersTests.swift */; };
+		1688AC172442E6B300A6B692 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688AC162442E6B300A6B692 /* UsersViewModel.swift */; };
 		1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B22442D8D9003DF17A /* UserCell.swift */; };
 		1690B5B52442DB48003DF17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B42442DB48003DF17A /* User.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		167927C82442D50D00818F67 /* GitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		167927CC2442D50D00818F67 /* GitHub_UsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_UsersTests.swift; sourceTree = "<group>"; };
 		167927CE2442D50D00818F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1688AC162442E6B300A6B692 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		1690B5B22442D8D9003DF17A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		1690B5B42442DB48003DF17A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				1690B5B42442DB48003DF17A /* User.swift */,
 				1690B5B22442D8D9003DF17A /* UserCell.swift */,
 				162B82D42442E42000C45229 /* UsersDataSrouce.swift */,
+				1688AC162442E6B300A6B692 /* UsersViewModel.swift */,
 				167927B92442D50D00818F67 /* UserViewController.swift */,
 				167927BB2442D50D00818F67 /* User.storyboard */,
 			);
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167927BA2442D50D00818F67 /* UserViewController.swift in Sources */,
+				1688AC172442E6B300A6B692 /* UsersViewModel.swift in Sources */,
 				1690B5B32442D8D9003DF17A /* UserCell.swift in Sources */,
 				162B82D22442DF4300C45229 /* AppError.swift in Sources */,
 				162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */,
