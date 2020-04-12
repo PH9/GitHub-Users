@@ -21,7 +21,9 @@ class ActivityIndicator {
   }
 
   static func dismiss() {
-    shared.activityIndicator.startAnimating()
-    shared.activityIndicator.removeFromSuperview()
+    DispatchQueue.main.async {
+      shared.activityIndicator.startAnimating()
+      shared.activityIndicator.removeFromSuperview()
+    }
   }
 }
