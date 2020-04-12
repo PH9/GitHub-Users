@@ -2,42 +2,25 @@ import UIKit
 
 class UserViewController: UITableViewController {
 
+  let viewModel = UsersViewModel()
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    getUsers { result in
-      switch result {
-      case .success(let users):
-        print(users)
-      case .failure(let error):
-        print(error)
-      }
-    }
+    bidingViewModel()
+    viewModel.getUsers()
   }
 
-  private func getUsers(completionHandler completion: @escaping (Result<[User], AppError>) -> Void) {
-    let session = URLSession.shared
-    let url = URL(string: "https://api.github.com/users")!
+  private func bidingViewModel() {
+    viewModel.getUserSuccess = getUsersSuccess(_:)
+    viewModel.getUserFailure = getUsersFailure(_:)
+  }
 
-    let task = session.dataTask(with: url) { data, response, error in
-      if let error = error {
-        let appError = AppError(error: error)
-        completion(.failure(appError))
-        return
-      }
+  private func getUsersSuccess(_ users: [User]) {
+    print(users)
+  }
 
-      guard
-        let data = data,
-        let users = try? JSONDecoder().decode([User].self, from: data)
-        else {
-          let appError = AppError(message: "Unexpected response, please try again later")
-          completion(.failure(appError))
-          return
-      }
-
-      completion(.success(users))
-    }
-
-    task.resume()
+  private func getUsersFailure(_ error: AppError) {
+    print(error)
   }
 }
 
