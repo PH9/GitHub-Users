@@ -20,7 +20,7 @@ class UsersViewModel {
     let session = URLSession.shared
     let url = URL(string: "https://api.github.com/users")!
 
-    let task = session.dataTask(with: url) { data, response, error in
+    let task = session.dataTask(with: url) { data, _, error in
       if let error = error {
         let appError = AppError(error: error)
         completion(.failure(appError))

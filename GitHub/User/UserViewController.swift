@@ -40,4 +40,3 @@ class UserViewController: UITableViewController {
     present(webView, animated: true, completion: nil)
   }
 }
-
