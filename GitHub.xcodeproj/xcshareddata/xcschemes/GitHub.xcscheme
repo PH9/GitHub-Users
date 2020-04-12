@@ -76,12 +76,12 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "FB_REFERENCE_IMAGE_DIR"
-            value = "$(SOURCE_ROOT)/Snapshots"
+            value = "$(SOURCE_ROOT)/Snapshots/"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "IMAGE_DIFF_DIR"
-            value = "$(SOURCE_ROOT)/Snapshots/Failures"
+            value = "$(SOURCE_ROOT)/Snapshots/Failures/"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
