@@ -37,21 +37,23 @@ class UserViewController: UITableViewController {
   }
 
   private func showFullPage(message: String) {
-    let messageLabel = UILabel()
-    messageLabel.text = message
-    messageLabel.numberOfLines = 0
-    messageLabel.textAlignment = .center
-    messageLabel.font = .preferredFont(forTextStyle: .body)
-    messageLabel.sizeToFit()
-    messageLabel.adjustsFontForContentSizeCategory = true
+    DispatchQueue.main.async {
+      let messageLabel = UILabel()
+      messageLabel.text = message
+      messageLabel.numberOfLines = 0
+      messageLabel.textAlignment = .center
+      messageLabel.font = .preferredFont(forTextStyle: .body)
+      messageLabel.sizeToFit()
+      messageLabel.adjustsFontForContentSizeCategory = true
 
-    tableView.backgroundView = messageLabel
-    tableView.separatorStyle = .none
+      self.tableView.backgroundView = messageLabel
+      self.tableView.separatorStyle = .none
+      self.tableView.reloadData()
+    }
   }
 
   private func getUsersFailure(_ error: AppError) {
     showFullPage(message: error.message)
-    tableView.reloadData()
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
