@@ -2,7 +2,7 @@ import UIKit
 
 class UsersDataSource: NSObject, UITableViewDataSource {
 
-  private var users: [User] = []
+  private(set) var users: [User] = []
 
   func replace(users: [User]) {
     self.users = users

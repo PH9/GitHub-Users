@@ -27,5 +27,17 @@ class UserViewController: UITableViewController {
   private func getUsersFailure(_ error: AppError) {
     print(error)
   }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let url = dataSource.users[indexPath.row].html_url
+    presentWebViewFrom(url: url)
+  }
+
+  private func presentWebViewFrom(url: String) {
+    let webView = SimpleWebViewViewController()
+    webView.configureWith(url: url)
+
+    present(webView, animated: true, completion: nil)
+  }
 }
 
