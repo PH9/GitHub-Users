@@ -10,7 +10,4 @@ class FetchingCell: UITableViewCell {
     activityIndicatorView.startAnimating()
   }
 
-  static var reusableIdentifier: String {
-    String(describing: self)
-  }
 }

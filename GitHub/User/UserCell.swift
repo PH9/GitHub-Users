@@ -65,10 +65,6 @@ class UserCell: UITableViewCell {
     adminStatusLabel.text = String(user.site_admin)
   }
 
-  static var reusableIdentifier: String {
-    String(describing: self)
-  }
-
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(false, animated: animated)
   }

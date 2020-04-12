@@ -20,6 +20,7 @@ class UserViewController: UITableViewController {
     tableView.prefetchDataSource = dataSource
     viewModel.getUserSuccess = getUsersSuccess(_:)
     viewModel.getUserFailure = getUsersFailure(_:)
+    viewModel.showErrorCell = showErrorCell(_:)
   }
 
   private func registerCell() {
@@ -57,12 +58,22 @@ class UserViewController: UITableViewController {
     }
   }
 
-  private func getUsersFailure(_ error: AppError) {
-    showFullPage(message: error.message)
+  private func getUsersFailure(_ message: String) {
+    showFullPage(message: message)
+  }
+
+  private func showErrorCell(_ message: String) {
+    dataSource.showErrorCell(message: message)
+    tableView.reloadData()
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let url = dataSource.users[indexPath.row].html_url
+    let value = dataSource.values[indexPath.section][indexPath.row]
+
+    guard let url = (value as? User)?.html_url else {
+      return
+    }
+
     presentWebViewFrom(url: url)
   }
 
@@ -79,7 +90,7 @@ class UserViewController: UITableViewController {
 
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
     if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
-      dataSource.isFetching = true
+      dataSource.showFetchingCell()
       tableView.reloadData()
       viewModel.getNewUsers()
     }
