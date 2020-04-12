@@ -113,6 +113,15 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		1660177724438BF000799A82 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1660177224436CAF00799A82 /* FetchingCell.swift */,
+				1660177124436CAE00799A82 /* FetchingCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		167927A92442D50D00818F67 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +148,7 @@
 				167927B52442D50D00818F67 /* AppDelegate.swift */,
 				167927B72442D50D00818F67 /* SceneDelegate.swift */,
 				167927BE2442D50D00818F67 /* Assets.xcassets */,
+				1660177724438BF000799A82 /* Cell */,
 				167927C02442D50D00818F67 /* LaunchScreen.storyboard */,
 				1697B97924433F0D00A09CAB /* Library */,
 				162B82D32442E17800C45229 /* User */,
@@ -168,8 +178,6 @@
 				16455438244357D2009A7BD8 /* ActivityIndicator.swift */,
 				162B82D12442DF4300C45229 /* AppError.swift */,
 				1660177524438B0500799A82 /* Extension.swift */,
-				1660177224436CAF00799A82 /* FetchingCell.swift */,
-				1660177124436CAE00799A82 /* FetchingCell.xib */,
 				1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */,
 				1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */,
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
