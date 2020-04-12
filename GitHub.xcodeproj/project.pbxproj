@@ -23,6 +23,7 @@
 		1697B9752442F3E200A09CAB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1697B9742442F3E200A09CAB /* Kingfisher.framework */; };
 		1697B97B24433F3800A09CAB /* UIImageView+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */; };
 		1697B97D2443402B00A09CAB /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */; };
+		1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1697B9742442F3E200A09CAB /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImage.swift"; sourceTree = "<group>"; };
 		1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
+		1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				162B82D12442DF4300C45229 /* AppError.swift */,
 				1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */,
+				1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */,
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
 				1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */,
 			);
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */,
+				1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
