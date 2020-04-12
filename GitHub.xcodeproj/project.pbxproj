@@ -110,11 +110,10 @@
 			children = (
 				167927C32442D50D00818F67 /* Info.plist */,
 				167927B52442D50D00818F67 /* AppDelegate.swift */,
-				162B82D12442DF4300C45229 /* AppError.swift */,
 				167927B72442D50D00818F67 /* SceneDelegate.swift */,
-				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
 				167927BE2442D50D00818F67 /* Assets.xcassets */,
 				167927C02442D50D00818F67 /* LaunchScreen.storyboard */,
+				1697B97924433F0D00A09CAB /* Library */,
 				162B82D32442E17800C45229 /* User */,
 			);
 			path = GitHub;
@@ -135,6 +134,15 @@
 				1697B9742442F3E200A09CAB /* Kingfisher.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1697B97924433F0D00A09CAB /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				162B82D12442DF4300C45229 /* AppError.swift */,
+				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
