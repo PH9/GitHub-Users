@@ -15,6 +15,7 @@
 		167927C22442D50D00818F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167927C02442D50D00818F67 /* LaunchScreen.storyboard */; };
 		167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927CC2442D50D00818F67 /* GitHub_UsersTests.swift */; };
 		1690B5B32442D8D9003DF17A /* GitHubUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B22442D8D9003DF17A /* GitHubUserCell.swift */; };
+		1690B5B52442DB48003DF17A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690B5B42442DB48003DF17A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		167927CC2442D50D00818F67 /* GitHub_UsersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_UsersTests.swift; sourceTree = "<group>"; };
 		167927CE2442D50D00818F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1690B5B22442D8D9003DF17A /* GitHubUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserCell.swift; sourceTree = "<group>"; };
+		1690B5B42442DB48003DF17A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				1690B5B22442D8D9003DF17A /* GitHubUserCell.swift */,
 				167927B92442D50D00818F67 /* GitHubUserViewController.swift */,
 				167927B72442D50D00818F67 /* SceneDelegate.swift */,
+				1690B5B42442DB48003DF17A /* User.swift */,
 				167927BE2442D50D00818F67 /* Assets.xcassets */,
 				167927BB2442D50D00818F67 /* GitHubUser.storyboard */,
 				167927C02442D50D00818F67 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 				167927BA2442D50D00818F67 /* GitHubUserViewController.swift in Sources */,
 				1690B5B32442D8D9003DF17A /* GitHubUserCell.swift in Sources */,
 				167927B62442D50D00818F67 /* AppDelegate.swift in Sources */,
+				1690B5B52442DB48003DF17A /* User.swift in Sources */,
 				167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
