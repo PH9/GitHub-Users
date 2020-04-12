@@ -69,6 +69,9 @@
                                             <rect key="frame" x="147" y="127" width="120" height="34.5"/>
                                             <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                             <state key="normal" title="Favorite Button"/>
+                                            <connections>
+                                                <action selector="favoriteButtonTapped:" destination="vbU-Ci-E5Q" eventType="touchUpInside" id="aXt-IQ-iWU"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -102,6 +105,14 @@
                             <outlet property="delegate" destination="vbU-Ci-E5Q" id="8Jc-Dy-QAa"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="accountTypeLabel" destination="BOh-aI-dxf" id="4to-r3-Xmt"/>
+                        <outlet property="adminStatusLabel" destination="K0E-6Z-3JN" id="7Rz-Z4-T6h"/>
+                        <outlet property="favoriteButton" destination="Pis-ex-Kjj" id="4vr-Os-3Zb"/>
+                        <outlet property="urlLabel" destination="BLl-cD-5rO" id="cy8-6T-kO4"/>
+                        <outlet property="userAvatarImage" destination="0NR-2b-zUc" id="nNp-L2-J8a"/>
+                        <outlet property="userLabel" destination="g6X-WM-d12" id="7dy-Kh-WDv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gM-qq-6O9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
