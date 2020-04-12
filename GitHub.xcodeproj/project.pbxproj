@@ -10,6 +10,8 @@
 		162B82D22442DF4300C45229 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D12442DF4300C45229 /* AppError.swift */; };
 		162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162B82D42442E42000C45229 /* UsersDataSrouce.swift */; };
 		1645542E2443472D009A7BD8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645542D2443472D009A7BD8 /* WebService.swift */; };
+		1645543024434849009A7BD8 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645542F24434849009A7BD8 /* UsersRequest.swift */; };
+		16455432244348B5009A7BD8 /* UsersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455431244348B5009A7BD8 /* UsersRequestTests.swift */; };
 		167927B62442D50D00818F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B52442D50D00818F67 /* AppDelegate.swift */; };
 		167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B72442D50D00818F67 /* SceneDelegate.swift */; };
 		167927BA2442D50D00818F67 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167927B92442D50D00818F67 /* UserViewController.swift */; };
@@ -42,6 +44,8 @@
 		162B82D12442DF4300C45229 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		162B82D42442E42000C45229 /* UsersDataSrouce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataSrouce.swift; sourceTree = "<group>"; };
 		1645542D2443472D009A7BD8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		1645542F24434849009A7BD8 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
+		16455431244348B5009A7BD8 /* UsersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequestTests.swift; sourceTree = "<group>"; };
 		167927B22442D50D00818F67 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167927B52442D50D00818F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		167927B72442D50D00818F67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				1690B5B42442DB48003DF17A /* User.swift */,
 				1690B5B22442D8D9003DF17A /* UserCell.swift */,
 				162B82D42442E42000C45229 /* UsersDataSrouce.swift */,
+				1645542F24434849009A7BD8 /* UsersRequest.swift */,
+				16455431244348B5009A7BD8 /* UsersRequestTests.swift */,
 				1688AC162442E6B300A6B692 /* UsersViewModel.swift */,
 				167927B92442D50D00818F67 /* UserViewController.swift */,
 				1697B980244343FC00A09CAB /* UserViewControllerTests.swift */,
@@ -333,6 +339,7 @@
 				162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */,
 				167927B62442D50D00818F67 /* AppDelegate.swift in Sources */,
 				1697B97D2443402B00A09CAB /* ImagePrefetcher.swift in Sources */,
+				1645543024434849009A7BD8 /* UsersRequest.swift in Sources */,
 				1690B5B52442DB48003DF17A /* User.swift in Sources */,
 				167927B82442D50D00818F67 /* SceneDelegate.swift in Sources */,
 			);
@@ -342,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16455432244348B5009A7BD8 /* UsersRequestTests.swift in Sources */,
 				167927CD2442D50D00818F67 /* GitHub_UsersTests.swift in Sources */,
 				1697B97F244341AA00A09CAB /* ImagePrefetcherTests.swift in Sources */,
 				1697B981244343FC00A09CAB /* UserViewControllerTests.swift in Sources */,
