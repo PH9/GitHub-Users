@@ -15,7 +15,7 @@ class UsersDataSource: NSObject, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.reusableIdentifier, for: indexPath)
       as? UserCell else {
-      fatalError("Could not dequque \(UserCell.reusableIdentifier) for \(indexPath)")
+        fatalError("Could not dequque \(UserCell.reusableIdentifier) for \(indexPath)")
     }
 
     let user = users[indexPath.row]
@@ -23,4 +23,5 @@ class UsersDataSource: NSObject, UITableViewDataSource {
 
     return cell
   }
+
 }
