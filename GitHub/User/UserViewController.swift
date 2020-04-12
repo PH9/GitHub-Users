@@ -7,17 +7,17 @@ class UserViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    dataSource.delegeate = self
-    tableView.dataSource = dataSource
-    tableView.prefetchDataSource = dataSource
-    bidingViewModel()
+    binding()
     viewModel.getUsers()
 
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 172.5
   }
 
-  private func bidingViewModel() {
+  private func binding() {
+    dataSource.delegeate = self
+    tableView.dataSource = dataSource
+    tableView.prefetchDataSource = dataSource
     viewModel.getUserSuccess = getUsersSuccess(_:)
     viewModel.getUserFailure = getUsersFailure(_:)
   }
