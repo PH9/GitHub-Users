@@ -1,6 +1,6 @@
 import UIKit
 
-class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePrefetching {
+class UsersDataSource: NSObject, UITableViewDataSource {
 
   enum Section: Int {
     case user

@@ -26,7 +26,6 @@ class UserViewController: UITableViewController {
 
   private func binding() {
     tableView.dataSource = dataSource
-    tableView.prefetchDataSource = dataSource
     viewModel.getUsersSuccess = getUsersSuccess(_:)
     viewModel.getUsersFailure = getUsersFailure(_:)
   }
