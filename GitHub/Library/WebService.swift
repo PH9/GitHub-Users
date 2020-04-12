@@ -16,7 +16,8 @@ class WebService {
   func request<R: Requestable>(
     request: R,
     completionHandler completion: @escaping (Result<R.ResponseType, AppError>) -> Void) {
-    let task = session.dataTask(with: request.url) { data, response, error in
+    let urlRequest = createURLRequest(request: request)
+    let task = session.dataTask(with: urlRequest) { data, response, error in
       if let error = error {
         let appError = AppError(error: error)
         completion(.failure(appError))
@@ -52,5 +53,10 @@ class WebService {
     }
 
     task.resume()
+  }
+
+  private func createURLRequest<R: Requestable>(request: R) -> URLRequest {
+    let urlRequest = URLRequest(url: request.url)
+    return urlRequest
   }
 }

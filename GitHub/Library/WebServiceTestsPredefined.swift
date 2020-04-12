@@ -37,13 +37,14 @@ class SpySession: URLSession {
   }
 
   override func dataTask(
-    with url: URL,
+    with request: URLRequest,
     completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
   ) -> URLSessionDataTask {
-    self.url = url
+    url = request.url
     completionHandler(responseData, urlResponse, responseError)
     return spy
   }
+
 }
 
 class SuccessHTTPURLResponse: HTTPURLResponse {
