@@ -9,6 +9,7 @@ class UserViewController: UITableViewController {
     super.viewDidLoad()
     dataSource.delegeate = self
     tableView.dataSource = dataSource
+    tableView.prefetchDataSource = dataSource
     bidingViewModel()
     viewModel.getUsers()
 

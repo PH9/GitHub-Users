@@ -44,7 +44,8 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
   }
 
   func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-    // TODO: Prefetch Image
+    let urls = indexPaths.compactMap { URL(string: users[$0.row].avatar_url) }
+    ImagePrefetcher(urls: urls).start()
   }
 
 }
