@@ -2,13 +2,23 @@ import Foundation
 
 class UsersViewModel {
 
+  private var users: [User] = []
+
   var getUserSuccess: (([User]) -> Void)?
   var getUserFailure: ((AppError) -> Void)?
 
-  func getUsers() {
-    getUsers { result in
+  private var isFetching = false
+
+  func getUsers(sinceId userId: Int = 0) {
+    isFetching = true
+    getUsers(sinceId: userId) { result in
+      defer {
+        self.isFetching = false
+      }
+
       switch result {
       case .success(let users):
+        self.users += users
         self.getUserSuccess?(users)
       case .failure(let error):
         self.getUserFailure?(error)
@@ -16,9 +26,10 @@ class UsersViewModel {
     }
   }
 
-  private func getUsers(completionHandler completion: @escaping (Result<[User], AppError>) -> Void) {
+  private func getUsers(sinceId userId: Int,
+                        completionHandler completion: @escaping (Result<[User], AppError>) -> Void) {
     let session = URLSession.shared
-    let url = URL(string: "https://api.github.com/users")!
+    let url = URL(string: "https://api.github.com/users?since=\(userId)")!
 
     let task = session.dataTask(with: url) { data, _, error in
       if let error = error {
@@ -41,4 +52,5 @@ class UsersViewModel {
 
     task.resume()
   }
+
 }

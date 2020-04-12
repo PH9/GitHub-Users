@@ -43,4 +43,7 @@ class UsersDataSource: NSObject, UITableViewDataSource, UITableViewDataSourcePre
     delegeate?.usersDataSource(wantToFetchNewUser: nextId)
   }
 
+  func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+    // TODO: Prefetch Image
+  }
 }
