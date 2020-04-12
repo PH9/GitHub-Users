@@ -57,10 +57,35 @@ class WebServiceTests: XCTestCase {
     let callbackExpectation = expectation(description: "should callback")
     webService.request(request: dummyRequest) { result in
       switch result {
-      case .success:
-        assertionFailure("should not got success result")
+      case .success(let response):
+        assertionFailure("should not got success result, but got \(response)")
       case .failure(let error):
         XCTAssertEqual(-2, error.code)
+      }
+
+      callbackExpectation.fulfill()
+    }
+
+    wait(for: [callbackExpectation], timeout: 1)
+
+    XCTAssertEqual(1, spyDataTask.resumeCalledCount)
+  }
+
+  func test_shouldAbleToParsingData() {
+    let webService = WebService()
+    let spyDataTask = SpyURLSessionDataTask()
+    let spySession = SpySession(spy: spyDataTask)
+    spySession.responseData = "{ \"isBool\": false }".data(using: .utf8)!
+    webService.session = spySession
+    let dummyRequest = DummyRequest()
+
+    let callbackExpectation = expectation(description: "should callback")
+    webService.request(request: dummyRequest) { result in
+      switch result {
+      case .success(let response):
+        XCTAssertEqual(false, response.isBool)
+      case .failure(let error):
+        assertionFailure("should not got failure result, but got error: \(error)")
       }
 
       callbackExpectation.fulfill()
