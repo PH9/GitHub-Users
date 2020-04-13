@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,88 +18,90 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="rn2-Kf-m4e" customClass="UserCell" customModule="GitHub" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="174"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="158"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rn2-Kf-m4e" id="R3y-GY-7oj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0NR-2b-zUc">
-                                            <rect key="frame" x="20" y="11" width="50" height="50"/>
+                                            <rect key="frame" x="20" y="11" width="100" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="6fi-TV-f7d"/>
-                                                <constraint firstAttribute="height" constant="50" id="DQI-Az-cie"/>
+                                                <constraint firstAttribute="width" constant="100" id="6fi-TV-f7d"/>
                                                 <constraint firstAttribute="width" secondItem="0NR-2b-zUc" secondAttribute="height" multiplier="1:1" id="Kgk-2Z-jlg"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6X-WM-d12">
-                                            <rect key="frame" x="78" y="11" width="316" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <rect key="frame" x="136" y="11" width="258" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub URL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLl-cD-5rO">
-                                            <rect key="frame" x="78" y="40" width="316" height="20.5"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <rect key="frame" x="136" y="36" width="258" height="14.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Account Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-0o-4B5">
-                                            <rect key="frame" x="20" y="68.5" width="115.5" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <rect key="frame" x="136" y="54.5" width="98.5" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account type value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOh-aI-dxf">
-                                            <rect key="frame" x="143.5" y="68.5" width="250.5" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <rect key="frame" x="242.5" y="56.5" width="151.5" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Admin Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsd-ZF-hk0">
-                                            <rect key="frame" x="20" y="97.5" width="112.5" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <rect key="frame" x="136" y="76.5" width="95.5" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin status value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0E-6Z-3JN">
-                                            <rect key="frame" x="140.5" y="97.5" width="253.5" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <rect key="frame" x="239.5" y="78.5" width="154.5" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pis-ex-Kjj">
-                                            <rect key="frame" x="144" y="126.5" width="126" height="36.5"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pis-ex-Kjj">
+                                            <rect key="frame" x="243" y="102.5" width="44" height="44.5"/>
+                                            <viewLayoutGuide key="safeArea" id="ZXw-XD-zKy"/>
                                             <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                            <state key="normal" title="Favorite Button"/>
+                                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" image="Heart">
+                                                <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
                                             <connections>
                                                 <action selector="favoriteButtonTapped:" destination="rn2-Kf-m4e" eventType="touchUpInside" id="Ywk-UI-0qR"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="lsd-ZF-hk0" firstAttribute="top" secondItem="BOh-aI-dxf" secondAttribute="bottom" constant="8" id="3Sq-on-iRL"/>
                                         <constraint firstItem="BOh-aI-dxf" firstAttribute="leading" secondItem="ytg-0o-4B5" secondAttribute="trailing" constant="8" id="3lt-K7-gjr"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="g6X-WM-d12" secondAttribute="trailing" id="6Wn-SO-Ugo"/>
                                         <constraint firstItem="0NR-2b-zUc" firstAttribute="top" secondItem="R3y-GY-7oj" secondAttribute="topMargin" id="9on-uR-eeV"/>
+                                        <constraint firstItem="ytg-0o-4B5" firstAttribute="leading" secondItem="BLl-cD-5rO" secondAttribute="leading" id="Clc-Hz-Cyt"/>
                                         <constraint firstItem="0NR-2b-zUc" firstAttribute="leading" secondItem="R3y-GY-7oj" secondAttribute="leadingMargin" id="DyY-rd-5XR"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Pis-ex-Kjj" secondAttribute="bottom" id="GDI-JJ-fZK"/>
                                         <constraint firstItem="BLl-cD-5rO" firstAttribute="trailing" secondItem="g6X-WM-d12" secondAttribute="trailing" id="HAa-c5-PiH"/>
+                                        <constraint firstItem="Pis-ex-Kjj" firstAttribute="top" secondItem="K0E-6Z-3JN" secondAttribute="bottom" constant="8" id="IKt-L1-fu2"/>
                                         <constraint firstItem="K0E-6Z-3JN" firstAttribute="leading" secondItem="lsd-ZF-hk0" secondAttribute="trailing" constant="8" id="K8R-S2-IGe"/>
-                                        <constraint firstItem="g6X-WM-d12" firstAttribute="leading" secondItem="0NR-2b-zUc" secondAttribute="trailing" constant="8" id="PvV-bh-GOC"/>
+                                        <constraint firstItem="lsd-ZF-hk0" firstAttribute="top" secondItem="BOh-aI-dxf" secondAttribute="bottom" constant="4" id="L9O-Nb-PK0"/>
+                                        <constraint firstItem="g6X-WM-d12" firstAttribute="leading" secondItem="0NR-2b-zUc" secondAttribute="trailing" constant="16" id="PvV-bh-GOC"/>
                                         <constraint firstItem="K0E-6Z-3JN" firstAttribute="trailing" secondItem="R3y-GY-7oj" secondAttribute="trailingMargin" id="Q6Y-sQ-D07"/>
-                                        <constraint firstItem="Pis-ex-Kjj" firstAttribute="centerX" secondItem="R3y-GY-7oj" secondAttribute="centerX" id="Rer-iH-JMX"/>
-                                        <constraint firstItem="BOh-aI-dxf" firstAttribute="top" secondItem="ytg-0o-4B5" secondAttribute="top" id="Tyw-3N-GDC"/>
-                                        <constraint firstItem="ytg-0o-4B5" firstAttribute="top" secondItem="BLl-cD-5rO" secondAttribute="bottom" constant="8" id="UAh-dd-vl9"/>
+                                        <constraint firstItem="ytg-0o-4B5" firstAttribute="top" secondItem="BLl-cD-5rO" secondAttribute="bottom" constant="4" id="UAh-dd-vl9"/>
                                         <constraint firstItem="BLl-cD-5rO" firstAttribute="leading" secondItem="g6X-WM-d12" secondAttribute="leading" id="Uet-NO-0dh"/>
-                                        <constraint firstItem="ytg-0o-4B5" firstAttribute="leading" secondItem="R3y-GY-7oj" secondAttribute="leadingMargin" id="Unr-tI-zhA"/>
-                                        <constraint firstItem="BLl-cD-5rO" firstAttribute="top" secondItem="g6X-WM-d12" secondAttribute="bottom" constant="8" id="Z5I-4L-tdM"/>
-                                        <constraint firstItem="K0E-6Z-3JN" firstAttribute="top" secondItem="lsd-ZF-hk0" secondAttribute="top" id="dZc-7k-mcz"/>
+                                        <constraint firstItem="BLl-cD-5rO" firstAttribute="top" secondItem="g6X-WM-d12" secondAttribute="bottom" constant="4" id="Z5I-4L-tdM"/>
+                                        <constraint firstItem="Pis-ex-Kjj" firstAttribute="centerX" secondItem="BLl-cD-5rO" secondAttribute="centerX" id="c2u-n7-Bow"/>
+                                        <constraint firstItem="BOh-aI-dxf" firstAttribute="bottom" secondItem="ytg-0o-4B5" secondAttribute="bottom" id="eg1-xf-bQj"/>
                                         <constraint firstItem="g6X-WM-d12" firstAttribute="top" secondItem="R3y-GY-7oj" secondAttribute="topMargin" id="i7g-y6-K8N"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="BOh-aI-dxf" secondAttribute="trailing" id="oDF-Tk-QWm"/>
-                                        <constraint firstItem="Pis-ex-Kjj" firstAttribute="top" secondItem="K0E-6Z-3JN" secondAttribute="bottom" constant="8" id="wLk-2K-JxY"/>
-                                        <constraint firstItem="lsd-ZF-hk0" firstAttribute="leading" secondItem="R3y-GY-7oj" secondAttribute="leadingMargin" id="wps-Jo-O8N"/>
+                                        <constraint firstItem="lsd-ZF-hk0" firstAttribute="leading" secondItem="ytg-0o-4B5" secondAttribute="leading" id="rMX-BM-9eA"/>
+                                        <constraint firstItem="K0E-6Z-3JN" firstAttribute="bottom" secondItem="lsd-ZF-hk0" secondAttribute="bottom" id="uWO-IX-M14"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -110,31 +113,13 @@
                                     <outlet property="favoriteButton" destination="Pis-ex-Kjj" id="wYL-Pt-x94"/>
                                     <outlet property="urlLabel" destination="BLl-cD-5rO" id="zLF-vd-x36"/>
                                     <outlet property="usernameLabel" destination="g6X-WM-d12" id="gGc-9W-Nme"/>
-                                    <outletCollection property="regularConstraints" destination="PvV-bh-GOC" collectionClass="NSMutableArray" id="7ic-lw-6bI"/>
-                                    <outletCollection property="regularConstraints" destination="9on-uR-eeV" collectionClass="NSMutableArray" id="1tL-qM-3CH"/>
-                                    <outletCollection property="regularConstraints" destination="3lt-K7-gjr" collectionClass="NSMutableArray" id="sMW-Xf-78g"/>
-                                    <outletCollection property="regularConstraints" destination="Tyw-3N-GDC" collectionClass="NSMutableArray" id="hhR-Dt-NNo"/>
-                                    <outletCollection property="regularConstraints" destination="DyY-rd-5XR" collectionClass="NSMutableArray" id="muu-fL-cR2"/>
-                                    <outletCollection property="regularConstraints" destination="UAh-dd-vl9" collectionClass="NSMutableArray" id="C25-73-S9f"/>
-                                    <outletCollection property="regularConstraints" destination="Unr-tI-zhA" collectionClass="NSMutableArray" id="Do3-bm-aJ2"/>
-                                    <outletCollection property="regularConstraints" destination="6Wn-SO-Ugo" collectionClass="NSMutableArray" id="F4d-bb-UyE"/>
-                                    <outletCollection property="regularConstraints" destination="i7g-y6-K8N" collectionClass="NSMutableArray" id="8G2-nA-1XA"/>
-                                    <outletCollection property="regularConstraints" destination="HAa-c5-PiH" collectionClass="NSMutableArray" id="Na2-fU-sYi"/>
-                                    <outletCollection property="regularConstraints" destination="Uet-NO-0dh" collectionClass="NSMutableArray" id="CPm-Vp-A08"/>
-                                    <outletCollection property="regularConstraints" destination="Z5I-4L-tdM" collectionClass="NSMutableArray" id="OHo-xM-Dpt"/>
-                                    <outletCollection property="regularConstraints" destination="3Sq-on-iRL" collectionClass="NSMutableArray" id="h9d-td-Y0I"/>
-                                    <outletCollection property="regularConstraints" destination="wps-Jo-O8N" collectionClass="NSMutableArray" id="Gmt-Yb-42C"/>
-                                    <outletCollection property="regularConstraints" destination="oDF-Tk-QWm" collectionClass="NSMutableArray" id="7Sb-Z4-8go"/>
-                                    <outletCollection property="regularConstraints" destination="K8R-S2-IGe" collectionClass="NSMutableArray" id="kM8-oa-ZXb"/>
-                                    <outletCollection property="regularConstraints" destination="Q6Y-sQ-D07" collectionClass="NSMutableArray" id="Yjx-qe-vyy"/>
-                                    <outletCollection property="regularConstraints" destination="dZc-7k-mcz" collectionClass="NSMutableArray" id="gyV-Yp-U9E"/>
-                                    <outletCollection property="regularConstraints" destination="6fi-TV-f7d" collectionClass="NSMutableArray" id="ajV-Nb-VfL"/>
-                                    <outletCollection property="regularConstraints" destination="DQI-Az-cie" collectionClass="NSMutableArray" id="J92-DP-2YM"/>
-                                    <outletCollection property="regularConstraints" destination="6fi-TV-f7d" collectionClass="NSMutableArray" id="l4t-cn-Dqn"/>
-                                    <outletCollection property="commonConstrains" destination="wLk-2K-JxY" collectionClass="NSMutableArray" id="1kh-Hg-gvq"/>
-                                    <outletCollection property="commonConstrains" destination="GDI-JJ-fZK" collectionClass="NSMutableArray" id="Vtt-ke-BEr"/>
-                                    <outletCollection property="commonConstrains" destination="Rer-iH-JMX" collectionClass="NSMutableArray" id="yf4-cl-fWW"/>
-                                    <outletCollection property="commonConstrains" destination="Kgk-2Z-jlg" collectionClass="NSMutableArray" id="Sxj-Xx-BmH"/>
+                                    <outletCollection property="regularConstraints" destination="6fi-TV-f7d" collectionClass="NSMutableArray" id="1D1-SO-uYH"/>
+                                    <outletCollection property="regularConstraints" destination="PvV-bh-GOC" collectionClass="NSMutableArray" id="RkI-cM-aHx"/>
+                                    <outletCollection property="regularConstraints" destination="i7g-y6-K8N" collectionClass="NSMutableArray" id="bDW-WE-jEX"/>
+                                    <outletCollection property="regularConstraints" destination="3lt-K7-gjr" collectionClass="NSMutableArray" id="wCg-jU-w03"/>
+                                    <outletCollection property="regularConstraints" destination="K8R-S2-IGe" collectionClass="NSMutableArray" id="Bq8-aL-dBl"/>
+                                    <outletCollection property="regularConstraints" destination="eg1-xf-bQj" collectionClass="NSMutableArray" id="l3y-lB-bNj"/>
+                                    <outletCollection property="regularConstraints" destination="uWO-IX-M14" collectionClass="NSMutableArray" id="m5g-uu-7LK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -149,4 +134,7 @@
             <point key="canvasLocation" x="114" y="141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Heart" width="28" height="28"/>
+    </resources>
 </document>
