@@ -20,6 +20,9 @@
 		16455432244348B5009A7BD8 /* UsersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455431244348B5009A7BD8 /* UsersRequestTests.swift */; };
 		16455434244349F0009A7BD8 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455433244349F0009A7BD8 /* WebServiceTests.swift */; };
 		1645543724435618009A7BD8 /* WebServiceTestsPredefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16455435244355FC009A7BD8 /* WebServiceTestsPredefined.swift */; };
+		165FE2EF244456E200CD64E0 /* ErrorFullPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165FE2EE244456E200CD64E0 /* ErrorFullPage.storyboard */; };
+		165FE2F1244456EF00CD64E0 /* ErrorFullPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165FE2F0244456EF00CD64E0 /* ErrorFullPageViewController.swift */; };
+		165FE2F3244458A700CD64E0 /* ErrorFullPageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165FE2F2244458A700CD64E0 /* ErrorFullPageViewControllerTests.swift */; };
 		1660177324436CAF00799A82 /* FetchingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1660177124436CAE00799A82 /* FetchingCell.xib */; };
 		1660177424436CAF00799A82 /* FetchingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660177224436CAF00799A82 /* FetchingCell.swift */; };
 		1660177624438B0500799A82 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1660177524438B0500799A82 /* Extension.swift */; };
@@ -76,6 +79,9 @@
 		16455431244348B5009A7BD8 /* UsersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequestTests.swift; sourceTree = "<group>"; };
 		16455433244349F0009A7BD8 /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		16455435244355FC009A7BD8 /* WebServiceTestsPredefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTestsPredefined.swift; sourceTree = "<group>"; };
+		165FE2EE244456E200CD64E0 /* ErrorFullPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ErrorFullPage.storyboard; sourceTree = "<group>"; };
+		165FE2F0244456EF00CD64E0 /* ErrorFullPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFullPageViewController.swift; sourceTree = "<group>"; };
+		165FE2F2244458A700CD64E0 /* ErrorFullPageViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFullPageViewControllerTests.swift; sourceTree = "<group>"; };
 		1660177124436CAE00799A82 /* FetchingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchingCell.xib; sourceTree = "<group>"; };
 		1660177224436CAF00799A82 /* FetchingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingCell.swift; sourceTree = "<group>"; };
 		1660177524438B0500799A82 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -211,15 +217,18 @@
 		1697B97924433F0D00A09CAB /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				165FE2EE244456E200CD64E0 /* ErrorFullPage.storyboard */,
 				162B82D12442DF4300C45229 /* AppError.swift */,
+				165FE2F0244456EF00CD64E0 /* ErrorFullPageViewController.swift */,
+				165FE2F2244458A700CD64E0 /* ErrorFullPageViewControllerTests.swift */,
 				1660177524438B0500799A82 /* Extension.swift */,
 				1697B97C2443402B00A09CAB /* ImagePrefetcher.swift */,
 				1697B97E244341AA00A09CAB /* ImagePrefetcherTests.swift */,
 				1688AC1A2442EA4400A6B692 /* SimpleWebViewViewController.swift */,
 				1606800A2443AB9D003EEC64 /* TestCase.swift */,
+				160680112443AED0003EEC64 /* TrailController.swift */,
 				1697B97A24433F3800A09CAB /* UIImageView+setImage.swift */,
 				160680062443A9E5003EEC64 /* WebService */,
-				160680112443AED0003EEC64 /* TrailController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167927C22442D50D00818F67 /* LaunchScreen.storyboard in Resources */,
+				165FE2EF244456E200CD64E0 /* ErrorFullPage.storyboard in Resources */,
 				1660177324436CAF00799A82 /* FetchingCell.xib in Resources */,
 				167927BF2442D50D00818F67 /* Assets.xcassets in Resources */,
 				167927BD2442D50D00818F67 /* User.storyboard in Resources */,
@@ -398,6 +408,7 @@
 				1697B97B24433F3800A09CAB /* UIImageView+setImage.swift in Sources */,
 				1660177624438B0500799A82 /* Extension.swift in Sources */,
 				1688AC1B2442EA4400A6B692 /* SimpleWebViewViewController.swift in Sources */,
+				165FE2F1244456EF00CD64E0 /* ErrorFullPageViewController.swift in Sources */,
 				1645542E2443472D009A7BD8 /* WebService.swift in Sources */,
 				162B82D52442E42000C45229 /* UsersDataSrouce.swift in Sources */,
 				167927B62442D50D00818F67 /* AppDelegate.swift in Sources */,
@@ -412,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165FE2F3244458A700CD64E0 /* ErrorFullPageViewControllerTests.swift in Sources */,
 				16455432244348B5009A7BD8 /* UsersRequestTests.swift in Sources */,
 				160680092443AA03003EEC64 /* MockWebService.swift in Sources */,
 				160680052443A5A3003EEC64 /* UsersViewModelTests.swift in Sources */,

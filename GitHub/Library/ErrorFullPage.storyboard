@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZLa-up-qXP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Error Full Page View Controller-->
+        <scene sceneID="RYs-X9-xg7">
+            <objects>
+                <viewController storyboardIdentifier="ErrorFullPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZLa-up-qXP" customClass="ErrorFullPageViewController" customModule="GitHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gWO-OO-VIk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jco-p9-Pve">
+                                <rect key="frame" x="0.0" y="443" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taZ-Y0-KC2">
+                                <rect key="frame" x="178.5" y="479.5" width="57" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Retry"/>
+                                <connections>
+                                    <action selector="retry:" destination="ZLa-up-qXP" eventType="touchUpInside" id="WHW-Kb-76I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="taZ-Y0-KC2" firstAttribute="centerX" secondItem="4Ly-p1-sYz" secondAttribute="centerX" id="NFZ-MQ-h8k"/>
+                            <constraint firstItem="taZ-Y0-KC2" firstAttribute="top" secondItem="Jco-p9-Pve" secondAttribute="bottom" constant="16" id="V5J-FY-tzf"/>
+                            <constraint firstItem="Jco-p9-Pve" firstAttribute="leading" secondItem="4Ly-p1-sYz" secondAttribute="leading" id="bHK-l1-1og"/>
+                            <constraint firstItem="Jco-p9-Pve" firstAttribute="centerY" secondItem="4Ly-p1-sYz" secondAttribute="centerY" id="qV7-Gl-eha"/>
+                            <constraint firstItem="Jco-p9-Pve" firstAttribute="centerX" secondItem="4Ly-p1-sYz" secondAttribute="centerX" id="vO6-Xw-pBh"/>
+                            <constraint firstItem="4Ly-p1-sYz" firstAttribute="trailing" secondItem="Jco-p9-Pve" secondAttribute="trailing" id="w3i-yF-AFX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Ly-p1-sYz"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Jco-p9-Pve" id="Zek-vp-39D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWa-Nw-sxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="-242.41071428571428"/>
+        </scene>
+    </scenes>
+</document>
