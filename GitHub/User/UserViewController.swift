@@ -1,6 +1,6 @@
 import UIKit
 
-class UserViewController: UITableViewController {
+class UserViewController: UITableViewController, ErrorFullPageDelegate {
 
   private let spinner = UIActivityIndicatorView(style: .gray)
 
@@ -47,23 +47,41 @@ class UserViewController: UITableViewController {
   }
 
   private func showFullPage(message: String) {
-    DispatchQueue.main.async {
-      let messageLabel = UILabel()
-      messageLabel.text = message
-      messageLabel.numberOfLines = 0
-      messageLabel.textAlignment = .center
-      messageLabel.font = .preferredFont(forTextStyle: .body)
-      messageLabel.sizeToFit()
-      messageLabel.adjustsFontForContentSizeCategory = true
+    let errorFullPageVC = ErrorFullPageViewController.instantiate(message: message)
+    errorFullPageVC.delegate = self
+    _ = errorFullPageVC.view
 
-      self.tableView.backgroundView = messageLabel
-      self.tableView.separatorStyle = .none
-      self.tableView.reloadData()
-    }
+    errorFullPageVC.view.willMove(toSuperview: tableView)
+    errorFullPageVC.willMove(toParent: self)
+    tableView.addSubview(errorFullPageVC.view)
+
+    let constraints = [
+      errorFullPageVC.view.topAnchor.constraint(equalTo: tableView.topAnchor),
+      errorFullPageVC.view.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+      errorFullPageVC.view.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
+      errorFullPageVC.view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
+    ]
+
+    NSLayoutConstraint.activate(constraints)
+
+    addChild(errorFullPageVC)
+    errorFullPageVC.view.didMoveToSuperview()
+    errorFullPageVC.didMove(toParent: self)
+  }
+
+  func errorFullPageSendSignalToRetry(_ vc: ErrorFullPageViewController) {
+    viewModel.getUsers()
+
+    vc.willMove(toParent: nil)
+    vc.view.willMove(toSuperview: nil)
+    vc.view.removeFromSuperview()
+    vc.removeFromParent()
+    vc.didMove(toParent: nil)
   }
 
   private func getUsersFailure(_ message: String) {
     spinner.stopAnimating()
+    showFullPage(message: message)
   }
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

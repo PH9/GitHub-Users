@@ -2,7 +2,7 @@ import UIKit
 
 protocol ErrorFullPageDelegate: class {
 
-  func errorFullPageSendSignalToRetry()
+  func errorFullPageSendSignalToRetry(_ vc: ErrorFullPageViewController)
 }
 
 class ErrorFullPageViewController: UIViewController {
@@ -25,6 +25,6 @@ class ErrorFullPageViewController: UIViewController {
   }
 
   @IBAction func retry(_ sender: Any) {
-    delegate?.errorFullPageSendSignalToRetry()
+    delegate?.errorFullPageSendSignalToRetry(self)
   }
 }
